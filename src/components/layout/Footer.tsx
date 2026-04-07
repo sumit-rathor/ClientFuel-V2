@@ -9,7 +9,7 @@ export const Footer = () => {
             ClientFuel
           </Link>
           <p className="text-xs uppercase tracking-widest text-[#5b4137] leading-loose max-w-xs">
-            Editorial performance agency for high-growth tech firms. Crafting digital authority through intentional design and code.
+            Affordable web design agency in India. We build websites that get clients, not just clicks. Helping local businesses grow online.
           </p>
         </div>
 

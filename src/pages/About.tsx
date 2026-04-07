@@ -1,14 +1,14 @@
 import { Helmet } from "react-helmet-async";
 import { FadeIn, StaggerContainer } from "@/src/components/ui/Animations";
 import { Button } from "@/src/components/ui/Button";
-import { Activity, Rocket, Handshake } from "lucide-react";
+import { Activity, Rocket, Handshake, Heart, ShieldCheck, Globe } from "lucide-react";
 
 export const About = () => {
   return (
     <>
       <Helmet>
-        <title>About ClientFuel | Our Story & Values</title>
-        <meta name="description" content="We don't build projects. We build momentum for businesses that refuse to stay stagnant." />
+        <title>About ClientFuel | Helping Indian Businesses Grow Online</title>
+        <meta name="description" content="ClientFuel is dedicated to helping local Indian businesses grow through conversion-focused web design. We focus on results, not just design." />
       </Helmet>
 
       {/* Hero Section */}
@@ -18,10 +18,10 @@ export const About = () => {
             <FadeIn direction="right">
               <span className="text-[0.75rem] uppercase tracking-widest text-[#fb5c01] font-bold mb-6 block">Our Story</span>
               <h1 className="text-[3.5rem] font-black leading-[1.1] tracking-[-0.04em] text-[#1d1b18] mb-8">
-                About ClientFuel
+                Helping Local Businesses in India Grow Online.
               </h1>
               <p className="text-[1.75rem] font-medium leading-tight text-[#5b4137] max-w-2xl">
-                We don't build projects. We build momentum for businesses that refuse to stay stagnant.
+                We don't build projects. We build growth engines for local businesses that are ready to scale in the digital age.
               </p>
             </FadeIn>
           </div>
@@ -34,13 +34,16 @@ export const About = () => {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
             <div className="lg:col-start-5 lg:col-span-8">
               <FadeIn>
-                <h2 className="text-[1.75rem] font-bold mb-12 tracking-tight text-[#1d1b18]">Focusing on outcome, not output.</h2>
+                <h2 className="text-[1.75rem] font-bold mb-12 tracking-tight text-[#1d1b18]">Focusing on your growth, not just code.</h2>
                 <div className="space-y-12">
                   <p className="text-lg leading-[1.6] text-[#5b4137] max-w-2xl">
-                    ClientFuel was founded on a simple realization: most agencies focus on deliverables, while clients focus on growth. We bridged that gap by making real business impact our primary metric of success.
+                    ClientFuel was founded with one goal: to help the local Indian business owner succeed online. We realized that most agencies focus on fancy designs, but business owners focus on getting more customers.
                   </p>
                   <p className="text-lg leading-[1.6] text-[#5b4137] max-w-2xl">
-                    We are a lean team of specialists. We don't hide behind layers of account managers or corporate jargon. When you work with us, you work directly with the people executing your strategy.
+                    We bridged that gap. When you work with us, you are not just getting a website; you are getting a partner who cares about your business inquiries as much as you do.
+                  </p>
+                  <p className="text-lg leading-[1.6] text-[#5b4137] max-w-2xl">
+                    You get direct access to the founder. No account managers, no layers of corporate talk. Just honest work that brings real results.
                   </p>
                 </div>
               </FadeIn>
@@ -53,66 +56,40 @@ export const About = () => {
       <section className="py-40 px-8 max-w-7xl mx-auto">
         <StaggerContainer className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <FadeIn className="bg-white p-12 rounded-lg flex flex-col justify-between min-h-[320px] border border-[#e4bfb1]/10">
-            <Activity className="text-[#fb5c01] w-10 h-10" />
+            <Heart className="text-[#fb5c01] w-10 h-10" />
             <div>
-              <h3 className="text-xl font-bold mb-4 text-[#1d1b18]">Radical Trust</h3>
-              <p className="text-sm leading-relaxed text-[#5b4137]">We operate with open books and honest timelines. No fluff, just results.</p>
+              <h3 className="text-xl font-bold mb-4 text-[#1d1b18]">Built for India</h3>
+              <p className="text-sm leading-relaxed text-[#5b4137]">Our designs are tailored to the behavior and trust factors of Indian customers.</p>
             </div>
           </FadeIn>
           <FadeIn className="bg-gradient-to-br from-[#a73a00] to-[#fb5c01] p-12 rounded-lg flex flex-col justify-between min-h-[320px] text-white">
-            <Rocket className="w-10 h-10" />
+            <Target className="w-10 h-10" />
             <div>
-              <h3 className="text-xl font-bold mb-4">Growth First</h3>
-              <p className="text-sm leading-relaxed opacity-90">Every line of code and every pixel is designed to move your needle forward.</p>
+              <h3 className="text-xl font-bold mb-4">Results First</h3>
+              <p className="text-sm leading-relaxed opacity-90">Every pixel we place is designed to help you get more inquiries and sales.</p>
             </div>
           </FadeIn>
           <FadeIn className="bg-white p-12 rounded-lg flex flex-col justify-between min-h-[320px] border border-[#e4bfb1]/10">
             <Handshake className="text-[#fb5c01] w-10 h-10" />
             <div>
-              <h3 className="text-xl font-bold mb-4 text-[#1d1b18]">True Partnership</h3>
-              <p className="text-sm leading-relaxed text-[#5b4137]">Your business goals become our team's daily obsession.</p>
+              <h3 className="text-xl font-bold mb-4 text-[#1d1b18]">Direct Support</h3>
+              <p className="text-sm leading-relaxed text-[#5b4137]">Talk directly to the people building your site. Quick support over WhatsApp and Email.</p>
             </div>
           </FadeIn>
         </StaggerContainer>
       </section>
 
-      {/* Imagery Section */}
-      <section className="pb-40 px-8 max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
-          <div className="md:col-span-7">
-            <FadeIn direction="right">
-              <img 
-                referrerPolicy="no-referrer"
-                className="w-full h-[600px] object-cover rounded-lg grayscale hover:grayscale-0 transition-all duration-700" 
-                src="https://picsum.photos/seed/teamwork/1200/800" 
-                alt="ClientFuel Team" 
-              />
-            </FadeIn>
-          </div>
-          <div className="md:col-span-4 md:col-start-9">
-            <FadeIn direction="left">
-              <h4 className="text-xs font-bold uppercase tracking-widest text-[#fb5c01] mb-6">The Commitment</h4>
-              <p className="text-lg leading-[1.6] italic text-[#1d1b18]">
-                "We treat every client's capital as if it were our own. That responsibility dictates every decision we make."
-              </p>
-              <div className="mt-8 pt-8 border-t border-[#e4bfb1]/20">
-                <p className="font-bold text-[#1d1b18]">Team ClientFuel</p>
-                <p className="text-xs uppercase tracking-widest text-[#5b4137]">Founded 2020</p>
-              </div>
-            </FadeIn>
-          </div>
-        </div>
-      </section>
-
       {/* CTA */}
       <section className="bg-[#ece7e2] py-32 px-8">
         <FadeIn className="max-w-4xl mx-auto text-center">
-          <h2 className="text-[2.5rem] font-black tracking-tight mb-8 text-[#1d1b18]">Ready to fuel your next phase?</h2>
+          <h2 className="text-[2.5rem] font-black tracking-tight mb-8 text-[#1d1b18]">Ready to grow your business?</h2>
           <Button to="/contact" size="lg">
-            Book a Call
+            Let's Talk
           </Button>
         </FadeIn>
       </section>
     </>
   );
 };
+
+import { Target } from "lucide-react";

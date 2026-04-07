@@ -9,6 +9,7 @@ export const Portfolio = () => {
       id: 1,
       title: "Real Estate Website",
       category: "Architecture & Dev",
+      description: "Designed to increase property inquiries and trust for a luxury real estate firm.",
       image: "https://picsum.photos/seed/re/800/1000",
       size: "large"
     },
@@ -16,6 +17,7 @@ export const Portfolio = () => {
       id: 2,
       title: "Direct-to-Consumer Tech",
       category: "Brand & UI/UX",
+      description: "A clean, modern interface built to turn tech enthusiasts into loyal customers.",
       image: "https://picsum.photos/seed/tech/800/1000",
       size: "large",
       offset: true
@@ -24,6 +26,7 @@ export const Portfolio = () => {
       id: 3,
       title: "Enterprise Rebrand",
       category: "Strategy",
+      description: "Repositioning a traditional business as a modern market leader in India.",
       image: "https://picsum.photos/seed/corp/800/600",
       size: "wide"
     },
@@ -31,6 +34,7 @@ export const Portfolio = () => {
       id: 4,
       title: "Fashion Platform",
       category: "Full-Stack Dev",
+      description: "A fast-loading retail site built for better mobile shopping engagement.",
       image: "https://picsum.photos/seed/fashion/800/1000",
       size: "large"
     }
@@ -39,17 +43,17 @@ export const Portfolio = () => {
   return (
     <>
       <Helmet>
-        <title>Our Work | ClientFuel Portfolio</title>
-        <meta name="description" content="Strategic digital experiences built for performance. View our selected projects." />
+        <title>Our Work | ClientFuel Portfolio | Websites for Indian Businesses</title>
+        <meta name="description" content="See how we've helped local Indian businesses grow their client base with conversion-focused web design." />
       </Helmet>
 
       <main className="pt-32">
         <header className="max-w-7xl mx-auto px-8 mb-24">
           <FadeIn direction="right">
             <span className="text-[0.75rem] uppercase tracking-widest text-[#fb5c01] font-bold mb-4 block">Selected Projects</span>
-            <h1 className="text-[3.5rem] md:text-[5rem] font-black leading-[1.1] tracking-[-0.04em] text-[#1d1b18] max-w-3xl">Our Work</h1>
+            <h1 className="text-[3.5rem] md:text-[5rem] font-black leading-[1.1] tracking-[-0.04em] text-[#1d1b18] max-w-3xl">Our Work — Websites for Local Business Success</h1>
             <p className="mt-8 text-lg text-[#5b4137] max-w-xl leading-relaxed">
-              Strategic digital experiences built for performance. We blend editorial precision with aggressive growth marketing.
+              We build websites that bring results. Every project here was designed with one goal: to get more clients for the business.
             </p>
           </FadeIn>
         </header>
@@ -74,6 +78,7 @@ export const Portfolio = () => {
                     <div>
                       <span className="text-[10px] uppercase tracking-widest text-[#fb5c01] font-bold mb-2 block">{project.category}</span>
                       <h3 className="text-[1.75rem] font-bold tracking-tight text-[#1d1b18]">{project.title}</h3>
+                      <p className="text-sm text-[#5b4137] mt-2 max-w-xs">{project.description}</p>
                     </div>
                     <ArrowUpRight className="text-[#5b4137] group-hover:text-[#fb5c01] transition-colors duration-300" />
                   </div>
@@ -88,12 +93,12 @@ export const Portfolio = () => {
           <div className="max-w-7xl mx-auto px-8 relative">
             <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-16">
               <FadeIn direction="right">
-                <h2 className="text-[3.5rem] font-black mb-8 text-[#1d1b18] leading-[1.1]">Ready to ignite your growth?</h2>
+                <h2 className="text-[3.5rem] font-black mb-8 text-[#1d1b18] leading-[1.1]">Ready to grow your business?</h2>
                 <p className="text-xl text-[#5b4137] mb-12 max-w-md leading-relaxed">
-                  Stop guessing. Start growing. Let's discuss how ClientFuel can transform your digital footprint.
+                  Stop guessing. Start growing. Let's build a website that brings you real customers.
                 </p>
                 <Button to="/contact" size="lg">
-                  Book a Call
+                  Book a Call Now
                 </Button>
               </FadeIn>
               <FadeIn direction="left" className="relative hidden md:block">
@@ -124,3 +129,4 @@ export const Portfolio = () => {
     </>
   );
 };
+

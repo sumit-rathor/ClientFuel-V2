@@ -7,8 +7,8 @@ export const Contact = () => {
   return (
     <>
       <Helmet>
-        <title>Contact Us | ClientFuel Agency</title>
-        <meta name="description" content="Ready to scale? Let's get started. We don't do generic proposals. Tell us where you want to be in 12 months." />
+        <title>Book a Call | ClientFuel | Web Design Agency in India</title>
+        <meta name="description" content="Ready to get more customers? Book a call with ClientFuel. We offer quick WhatsApp and Email support for local Indian businesses." />
       </Helmet>
 
       <main className="pt-48 pb-32 overflow-hidden">
@@ -17,35 +17,35 @@ export const Contact = () => {
             {/* Left Content */}
             <div className="lg:col-span-5 space-y-12">
               <FadeIn direction="right">
-                <span className="text-[0.75rem] uppercase tracking-[0.1em] text-[#fb5c01] font-bold mb-4 block">Ready to scale?</span>
-                <h1 className="text-[3.5rem] font-black leading-[1.1] tracking-[-0.04em] text-[#1d1b18] mb-8">Let's Get Started</h1>
+                <span className="text-[0.75rem] uppercase tracking-[0.1em] text-[#fb5c01] font-bold mb-4 block">Ready to grow?</span>
+                <h1 className="text-[3.5rem] font-black leading-[1.1] tracking-[-0.04em] text-[#1d1b18] mb-8">Small Business Website India — Book a Call</h1>
                 <p className="text-[#5b4137] text-lg leading-relaxed max-w-md">
-                  We don't do generic proposals. Tell us where you want to be in 12 months, and we'll show you how to get there.
+                  We don't do generic proposals. Tell us where you want your business to be in 12 months, and we'll show you how to get there.
                 </p>
               </FadeIn>
 
               {/* Booking Card */}
               <FadeIn direction="right" delay={0.2}>
-                <div className="p-10 bg-white rounded-lg border border-[#e4bfb1]/10 shadow-sm group transition-all duration-500">
+                <div className="p-10 bg-white rounded-xl border border-[#e4bfb1]/10 shadow-sm group transition-all duration-500">
                   <div className="flex items-center gap-4 mb-6">
                     <div className="w-12 h-12 rounded-full overflow-hidden bg-[#f8f3ed]">
                       <img 
                         referrerPolicy="no-referrer"
                         className="w-full h-full object-cover" 
                         src="https://picsum.photos/seed/contact/100/100" 
-                        alt="Team Member" 
+                        alt="Founder" 
                       />
                     </div>
                     <div>
-                      <h3 className="font-bold text-[#1d1b18]">Meet with our team</h3>
+                      <h3 className="font-bold text-[#1d1b18]">Talk to the Founder</h3>
                       <p className="text-xs text-[#5b4137] uppercase tracking-widest">15-minute Discovery Call</p>
                     </div>
                   </div>
                   <p className="text-sm text-[#5b4137] mb-8 leading-relaxed">
-                    Skip the back-and-forth. Select a time that works for you and let's discuss your performance goals directly.
+                    Skip the back-and-forth. Select a time that works for you and let's discuss your business growth directly.
                   </p>
                   <Button size="lg" className="w-full">
-                    Book a Call
+                    Book a Call Now
                   </Button>
                 </div>
               </FadeIn>
@@ -56,13 +56,14 @@ export const Contact = () => {
                 <div className="flex flex-col gap-3">
                   <a href="#" className="flex items-center gap-3 text-[#1d1b18] hover:text-[#fb5c01] transition-colors group">
                     <MessageSquare size={18} className="text-[#fb5c01]" />
-                    <span className="text-sm font-medium">WhatsApp: +1 (555) 000-0000</span>
+                    <span className="text-sm font-medium">WhatsApp Support: +91 000-000-0000</span>
                   </a>
                   <a href="mailto:hello@clientfuel.com" className="flex items-center gap-3 text-[#1d1b18] hover:text-[#fb5c01] transition-colors group">
                     <Mail size={18} className="text-[#fb5c01]" />
                     <span className="text-sm font-medium">Email: hello@clientfuel.com</span>
                   </a>
                 </div>
+                <p className="text-xs text-[#8f7065]">We usually respond within 2-4 hours.</p>
               </FadeIn>
             </div>
 
@@ -76,7 +77,7 @@ export const Contact = () => {
                         <label className="block text-xs uppercase tracking-widest text-[#5b4137] font-bold mb-2 transition-all group-focus-within:text-[#fb5c01]">Your Name</label>
                         <input 
                           className="w-full bg-transparent border-0 border-b border-[#e4bfb1]/30 py-4 focus:ring-0 focus:border-[#fb5c01] text-xl placeholder:text-stone-300 transition-all outline-none" 
-                          placeholder="John Doe" 
+                          placeholder="Enter your name" 
                           type="text"
                         />
                       </div>
@@ -84,14 +85,14 @@ export const Contact = () => {
                         <label className="block text-xs uppercase tracking-widest text-[#5b4137] font-bold mb-2 transition-all group-focus-within:text-[#fb5c01]">Email Address</label>
                         <input 
                           className="w-full bg-transparent border-0 border-b border-[#e4bfb1]/30 py-4 focus:ring-0 focus:border-[#fb5c01] text-xl placeholder:text-stone-300 transition-all outline-none" 
-                          placeholder="john@company.com" 
+                          placeholder="Enter your email" 
                           type="email"
                         />
                       </div>
                       <div className="group relative">
                         <label className="block text-xs uppercase tracking-widest text-[#5b4137] font-bold mb-2 transition-all group-focus-within:text-[#fb5c01]">What do you need help with?</label>
                         <div className="flex flex-wrap gap-3 mt-4">
-                          {["Scaling Ads", "Creative Strategy", "Email Marketing", "Other"].map((option) => (
+                          {["Starter Website", "Growth Website", "Premium Website", "Other"].map((option) => (
                             <button 
                               key={option}
                               type="button"
@@ -103,10 +104,10 @@ export const Contact = () => {
                         </div>
                       </div>
                       <div className="group relative">
-                        <label className="block text-xs uppercase tracking-widest text-[#5b4137] font-bold mb-2 transition-all group-focus-within:text-[#fb5c01]">Tell us about your project</label>
+                        <label className="block text-xs uppercase tracking-widest text-[#5b4137] font-bold mb-2 transition-all group-focus-within:text-[#fb5c01]">Tell us about your business</label>
                         <textarea 
                           className="w-full bg-transparent border-0 border-b border-[#e4bfb1]/30 py-4 focus:ring-0 focus:border-[#fb5c01] text-xl placeholder:text-stone-300 transition-all outline-none resize-none" 
-                          placeholder="How can we help you win?" 
+                          placeholder="How can we help you get more clients?" 
                           rows={4}
                         />
                       </div>
@@ -126,3 +127,4 @@ export const Contact = () => {
     </>
   );
 };
+
