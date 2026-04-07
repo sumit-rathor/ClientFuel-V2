@@ -54,13 +54,13 @@ export const Contact = () => {
               <FadeIn direction="right" delay={0.3} className="space-y-4 pt-8">
                 <h4 className="text-[0.75rem] uppercase tracking-[0.1em] text-[#5b4137] font-bold">Quick Connect</h4>
                 <div className="flex flex-col gap-3">
-                  <a href="#" className="flex items-center gap-3 text-[#1d1b18] hover:text-[#fb5c01] transition-colors group">
+                  <a href="https://wa.me/917727995722" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-[#1d1b18] hover:text-[#fb5c01] transition-colors group">
                     <MessageSquare size={18} className="text-[#fb5c01]" />
-                    <span className="text-sm font-medium">WhatsApp Support: +91 000-000-0000</span>
+                    <span className="text-sm font-medium">WhatsApp Support: +91 7727995722</span>
                   </a>
-                  <a href="mailto:hello@clientfuel.com" className="flex items-center gap-3 text-[#1d1b18] hover:text-[#fb5c01] transition-colors group">
+                  <a href="mailto:clientfuel.in@gmail.com" className="flex items-center gap-3 text-[#1d1b18] hover:text-[#fb5c01] transition-colors group">
                     <Mail size={18} className="text-[#fb5c01]" />
-                    <span className="text-sm font-medium">Email: hello@clientfuel.com</span>
+                    <span className="text-sm font-medium">Email: clientfuel.in@gmail.com</span>
                   </a>
                 </div>
                 <p className="text-xs text-[#8f7065]">We usually respond within 2-4 hours.</p>
