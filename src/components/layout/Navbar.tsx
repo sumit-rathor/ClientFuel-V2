@@ -41,9 +41,9 @@ export const Navbar = () => {
       <div className="max-w-7xl mx-auto flex justify-between items-center">
         <Link
           to="/"
-          className="text-2xl font-black tracking-tighter text-[#1d1b18]"
+          className="flex items-center"
         >
-          ClientFuel
+          <img src="/logo.svg" alt="ClientFuel Logo" className="h-8 w-auto" />
         </Link>
 
         {/* Desktop Nav */}

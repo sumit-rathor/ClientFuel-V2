@@ -32,7 +32,7 @@ export const Home = () => {
               </p>
             </FadeIn>
             <FadeIn direction="right" delay={0.4}>
-              <div className="flex flex-wrap gap-6">
+              <div className="flex flex-wrap gap-6 mb-12">
                 <Button to="/contact" size="lg">
                   Book a Call
                 </Button>
@@ -199,10 +199,13 @@ export const Home = () => {
               <div className="text-4xl font-black text-[#fb5c01] my-6">₹9,999</div>
               <p className="text-sm text-[#5b4137] mb-8">Perfect for small shops and individual service providers.</p>
               <ul className="space-y-4 mb-10 flex-grow">
-                <li className="flex items-center gap-2 text-sm"><CheckCircle size={16} className="text-[#fb5c01]" /> 1 Page Landing Site</li>
-                <li className="flex items-center gap-2 text-sm"><CheckCircle size={16} className="text-[#fb5c01]" /> Mobile Responsive</li>
-                <li className="flex items-center gap-2 text-sm"><CheckCircle size={16} className="text-[#fb5c01]" /> WhatsApp Integration</li>
-                <li className="flex items-center gap-2 text-sm"><CheckCircle size={16} className="text-[#fb5c01]" /> 3-Day Delivery</li>
+                <li className="flex items-center gap-2 text-sm"><CheckCircle size={16} className="text-[#fb5c01]" /> Up to 5 pages (Home, About, etc.)</li>
+                <li className="flex items-center gap-2 text-sm"><CheckCircle size={16} className="text-[#fb5c01]" /> Mobile responsive design</li>
+                <li className="flex items-center gap-2 text-sm"><CheckCircle size={16} className="text-[#fb5c01]" /> Clean template-based UI</li>
+                <li className="flex items-center gap-2 text-sm"><CheckCircle size={16} className="text-[#fb5c01]" /> Basic on-page SEO setup</li>
+                <li className="flex items-center gap-2 text-sm"><CheckCircle size={16} className="text-[#fb5c01]" /> Contact form + WhatsApp</li>
+                <li className="flex items-center gap-2 text-sm"><CheckCircle size={16} className="text-[#fb5c01]" /> Fast loading & Free SSL</li>
+                <li className="flex items-center gap-2 text-sm"><CheckCircle size={16} className="text-[#fb5c01]" /> 1 round of revisions</li>
               </ul>
               <Button to="/contact" variant="outline" className="w-full">Get Started</Button>
             </FadeIn>
@@ -212,10 +215,14 @@ export const Home = () => {
               <div className="text-4xl font-black text-[#fb5c01] my-6">₹14,999</div>
               <p className="text-sm text-[#5b4137] mb-8">Best for growing businesses needing a professional presence.</p>
               <ul className="space-y-4 mb-10 flex-grow">
-                <li className="flex items-center gap-2 text-sm"><CheckCircle size={16} className="text-[#fb5c01]" /> Up to 5 Pages</li>
-                <li className="flex items-center gap-2 text-sm"><CheckCircle size={16} className="text-[#fb5c01]" /> SEO Optimization</li>
-                <li className="flex items-center gap-2 text-sm"><CheckCircle size={16} className="text-[#fb5c01]" /> Google Maps Setup</li>
-                <li className="flex items-center gap-2 text-sm"><CheckCircle size={16} className="text-[#fb5c01]" /> 5-Day Delivery</li>
+                <li className="flex items-center gap-2 text-sm"><CheckCircle size={16} className="text-[#fb5c01]" /> Up to 8 pages</li>
+                <li className="flex items-center gap-2 text-sm"><CheckCircle size={16} className="text-[#fb5c01]" /> Custom-designed UI</li>
+                <li className="flex items-center gap-2 text-sm"><CheckCircle size={16} className="text-[#fb5c01]" /> Everything in Starter +</li>
+                <li className="flex items-center gap-2 text-sm"><CheckCircle size={16} className="text-[#fb5c01]" /> Google Maps & Social integration</li>
+                <li className="flex items-center gap-2 text-sm"><CheckCircle size={16} className="text-[#fb5c01]" /> Performance tuning</li>
+                <li className="flex items-center gap-2 text-sm"><CheckCircle size={16} className="text-[#fb5c01]" /> Branding consistency</li>
+                <li className="flex items-center gap-2 text-sm"><CheckCircle size={16} className="text-[#fb5c01]" /> Lead-focused sections</li>
+                <li className="flex items-center gap-2 text-sm"><CheckCircle size={16} className="text-[#fb5c01]" /> 2–3 revisions</li>
               </ul>
               <Button to="/contact" className="w-full">Get Started</Button>
             </FadeIn>
@@ -224,10 +231,14 @@ export const Home = () => {
               <div className="text-4xl font-black text-[#fb5c01] my-6">₹19,999</div>
               <p className="text-sm text-[#5b4137] mb-8">For businesses that want the absolute best performance.</p>
               <ul className="space-y-4 mb-10 flex-grow">
-                <li className="flex items-center gap-2 text-sm"><CheckCircle size={16} className="text-[#fb5c01]" /> Custom Design</li>
-                <li className="flex items-center gap-2 text-sm"><CheckCircle size={16} className="text-[#fb5c01]" /> Content Writing</li>
-                <li className="flex items-center gap-2 text-sm"><CheckCircle size={16} className="text-[#fb5c01]" /> Premium Animations</li>
-                <li className="flex items-center gap-2 text-sm"><CheckCircle size={16} className="text-[#fb5c01]" /> 7-Day Delivery</li>
+                <li className="flex items-center gap-2 text-sm"><CheckCircle size={16} className="text-[#fb5c01]" /> Up to 12 pages</li>
+                <li className="flex items-center gap-2 text-sm"><CheckCircle size={16} className="text-[#fb5c01]" /> Fully custom modern UI/UX</li>
+                <li className="flex items-center gap-2 text-sm"><CheckCircle size={16} className="text-[#fb5c01]" /> Everything in Growth +</li>
+                <li className="flex items-center gap-2 text-sm"><CheckCircle size={16} className="text-[#fb5c01]" /> Conversion-focused layout</li>
+                <li className="flex items-center gap-2 text-sm"><CheckCircle size={16} className="text-[#fb5c01]" /> Advanced SEO & Speed</li>
+                <li className="flex items-center gap-2 text-sm"><CheckCircle size={16} className="text-[#fb5c01]" /> Animations & Interactions</li>
+                <li className="flex items-center gap-2 text-sm"><CheckCircle size={16} className="text-[#fb5c01]" /> Content assistance</li>
+                <li className="flex items-center gap-2 text-sm"><CheckCircle size={16} className="text-[#fb5c01]" /> Priority support + 3-4 revs</li>
               </ul>
               <Button to="/contact" variant="outline" className="w-full">Get Started</Button>
             </FadeIn>
