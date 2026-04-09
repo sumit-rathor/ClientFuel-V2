@@ -1,9 +1,40 @@
+import React, { useState } from "react";
 import { Helmet } from "react-helmet-async";
 import { FadeIn } from "@/src/components/ui/Animations";
 import { Button } from "@/src/components/ui/Button";
-import { MessageSquare, Mail, ArrowRight } from "lucide-react";
+import { MessageSquare, Mail, ArrowRight, CheckCircle2, AlertCircle } from "lucide-react";
 
 export const Contact = () => {
+  const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
+  const [selectedService, setSelectedService] = useState("Starter Website");
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setStatus("loading");
+
+    const formData = new FormData(e.currentTarget);
+    formData.append("service", selectedService);
+
+    try {
+      const response = await fetch("https://formspree.io/f/mgopqlwo", {
+        method: "POST",
+        body: formData,
+        headers: {
+          Accept: "application/json",
+        },
+      });
+
+      if (response.ok) {
+        setStatus("success");
+        (e.target as HTMLFormElement).reset();
+      } else {
+        setStatus("error");
+      }
+    } catch (error) {
+      setStatus("error");
+    }
+  };
+
   return (
     <>
       <Helmet>
@@ -82,52 +113,93 @@ export const Contact = () => {
             <div className="lg:col-span-7">
               <FadeIn direction="left">
                 <div className="bg-[#f8f3ed] p-12 lg:p-20 rounded-xl relative overflow-hidden">
-                  <form className="space-y-12 relative z-10">
-                    <div className="space-y-10">
-                      <div className="group relative">
-                        <label className="block text-xs uppercase tracking-widest text-[#5b4137] font-bold mb-2 transition-all group-focus-within:text-[#fb5c01]">Your Name</label>
-                        <input 
-                          className="w-full bg-transparent border-0 border-b border-[#e4bfb1]/30 py-4 focus:ring-0 focus:border-[#fb5c01] text-xl placeholder:text-stone-300 transition-all outline-none" 
-                          placeholder="Enter your name" 
-                          type="text"
-                        />
+                  {status === "success" ? (
+                    <div className="relative z-10 flex flex-col items-center justify-center text-center py-12">
+                      <div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mb-6">
+                        <CheckCircle2 className="w-10 h-10 text-green-600" />
                       </div>
-                      <div className="group relative">
-                        <label className="block text-xs uppercase tracking-widest text-[#5b4137] font-bold mb-2 transition-all group-focus-within:text-[#fb5c01]">Email Address</label>
-                        <input 
-                          className="w-full bg-transparent border-0 border-b border-[#e4bfb1]/30 py-4 focus:ring-0 focus:border-[#fb5c01] text-xl placeholder:text-stone-300 transition-all outline-none" 
-                          placeholder="Enter your email" 
-                          type="email"
-                        />
-                      </div>
-                      <div className="group relative">
-                        <label className="block text-xs uppercase tracking-widest text-[#5b4137] font-bold mb-2 transition-all group-focus-within:text-[#fb5c01]">What do you need help with?</label>
-                        <div className="flex flex-wrap gap-3 mt-4">
-                          {["Starter Website", "Growth Website", "Premium Website", "Other"].map((option) => (
-                            <button 
-                              key={option}
-                              type="button"
-                              className="px-5 py-2 rounded-full border border-[#e4bfb1]/50 text-xs font-bold uppercase tracking-widest hover:bg-[#fb5c01] hover:border-[#fb5c01] hover:text-white transition-all"
-                            >
-                              {option}
-                            </button>
-                          ))}
+                      <h2 className="text-3xl font-black text-[#1d1b18] mb-4">Message Sent!</h2>
+                      <p className="text-[#5b4137] text-lg mb-8 max-w-sm">
+                        Thanks for reaching out. We've received your message and will get back to you within 2-4 hours.
+                      </p>
+                      <Button 
+                        variant="outline" 
+                        onClick={() => setStatus("idle")}
+                      >
+                        Send Another Message
+                      </Button>
+                    </div>
+                  ) : (
+                    <form onSubmit={handleSubmit} className="space-y-12 relative z-10">
+                      <div className="space-y-10">
+                        <div className="group relative">
+                          <label className="block text-xs uppercase tracking-widest text-[#5b4137] font-bold mb-2 transition-all group-focus-within:text-[#fb5c01]">Your Name</label>
+                          <input 
+                            required
+                            name="name"
+                            className="w-full bg-transparent border-0 border-b border-[#e4bfb1]/30 py-4 focus:ring-0 focus:border-[#fb5c01] text-xl placeholder:text-stone-300 transition-all outline-none" 
+                            placeholder="Enter your name" 
+                            type="text"
+                          />
+                        </div>
+                        <div className="group relative">
+                          <label className="block text-xs uppercase tracking-widest text-[#5b4137] font-bold mb-2 transition-all group-focus-within:text-[#fb5c01]">Email Address</label>
+                          <input 
+                            required
+                            name="email"
+                            className="w-full bg-transparent border-0 border-b border-[#e4bfb1]/30 py-4 focus:ring-0 focus:border-[#fb5c01] text-xl placeholder:text-stone-300 transition-all outline-none" 
+                            placeholder="Enter your email" 
+                            type="email"
+                          />
+                        </div>
+                        <div className="group relative">
+                          <label className="block text-xs uppercase tracking-widest text-[#5b4137] font-bold mb-2 transition-all group-focus-within:text-[#fb5c01]">What do you need help with?</label>
+                          <div className="flex flex-wrap gap-3 mt-4">
+                            {["Starter Website", "Growth Website", "Premium Website", "Other"].map((option) => (
+                              <button 
+                                key={option}
+                                type="button"
+                                onClick={() => setSelectedService(option)}
+                                className={`px-5 py-2 rounded-full border text-xs font-bold uppercase tracking-widest transition-all ${
+                                  selectedService === option 
+                                    ? "bg-[#fb5c01] border-[#fb5c01] text-white" 
+                                    : "border-[#e4bfb1]/50 hover:bg-[#fb5c01] hover:border-[#fb5c01] hover:text-white"
+                                }`}
+                              >
+                                {option}
+                              </button>
+                            ))}
+                          </div>
+                        </div>
+                        <div className="group relative">
+                          <label className="block text-xs uppercase tracking-widest text-[#5b4137] font-bold mb-2 transition-all group-focus-within:text-[#fb5c01]">Tell us about your business</label>
+                          <textarea 
+                            required
+                            name="message"
+                            className="w-full bg-transparent border-0 border-b border-[#e4bfb1]/30 py-4 focus:ring-0 focus:border-[#fb5c01] text-xl placeholder:text-stone-300 transition-all outline-none resize-none" 
+                            placeholder="How can we help you get more clients?" 
+                            rows={4}
+                          />
                         </div>
                       </div>
-                      <div className="group relative">
-                        <label className="block text-xs uppercase tracking-widest text-[#5b4137] font-bold mb-2 transition-all group-focus-within:text-[#fb5c01]">Tell us about your business</label>
-                        <textarea 
-                          className="w-full bg-transparent border-0 border-b border-[#e4bfb1]/30 py-4 focus:ring-0 focus:border-[#fb5c01] text-xl placeholder:text-stone-300 transition-all outline-none resize-none" 
-                          placeholder="How can we help you get more clients?" 
-                          rows={4}
-                        />
-                      </div>
-                    </div>
-                    <button className="inline-flex items-center gap-4 text-[#1d1b18] font-black text-2xl group transition-all" type="submit">
-                      Send Message
-                      <ArrowRight className="text-[#fb5c01] group-hover:translate-x-2 transition-transform duration-300" />
-                    </button>
-                  </form>
+
+                      {status === "error" && (
+                        <div className="flex items-center gap-2 text-red-600 bg-red-50 p-4 rounded-lg">
+                          <AlertCircle size={18} />
+                          <p className="text-sm font-medium">Something went wrong. Please try again or contact us via WhatsApp.</p>
+                        </div>
+                      )}
+
+                      <button 
+                        disabled={status === "loading"}
+                        className="inline-flex items-center gap-4 text-[#1d1b18] font-black text-2xl group transition-all disabled:opacity-50 disabled:cursor-not-allowed" 
+                        type="submit"
+                      >
+                        {status === "loading" ? "Sending..." : "Send Message"}
+                        <ArrowRight className="text-[#fb5c01] group-hover:translate-x-2 transition-transform duration-300" />
+                      </button>
+                    </form>
+                  )}
                   <div className="absolute -bottom-24 -right-24 w-96 h-96 bg-[#fb5c01]/5 rounded-full blur-3xl pointer-events-none"></div>
                 </div>
               </FadeIn>

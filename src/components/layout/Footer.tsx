@@ -79,7 +79,7 @@ export const Footer = () => {
         {/* Bottom Bar */}
         <div className="pt-12 border-t border-[#e4bfb1]/20 flex flex-col md:flex-row justify-between items-center gap-6">
           <p className="text-xs text-[#8f7065] font-medium">
-            © 2026 ClientFuel Agency. All rights reserved.
+            © 2026 ClientFuel. All rights reserved.
           </p>
           <div className="flex gap-8">
              <span className="text-[10px] uppercase tracking-widest text-[#8f7065] font-bold">Web Design Agency India</span>
