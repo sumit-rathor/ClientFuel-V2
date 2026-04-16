@@ -90,39 +90,16 @@ export const Portfolio = () => {
 
         {/* CTA Section */}
         <section className="bg-[#ece7e2] py-32 overflow-hidden">
-          <div className="max-w-7xl mx-auto px-8 relative">
-            <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-16">
-              <FadeIn direction="right">
-                <h2 className="text-[3.5rem] font-black mb-8 text-[#1d1b18] leading-[1.1]">Ready to grow your business?</h2>
-                <p className="text-xl text-[#5b4137] mb-12 max-w-md leading-relaxed">
-                  Stop guessing. Start growing. Let's build a website that brings you real customers.
-                </p>
-                <Button to="/contact" size="lg">
-                  Book a Call Now
-                </Button>
-              </FadeIn>
-              <FadeIn direction="left" className="relative hidden md:block">
-                <div className="relative p-12 bg-white rounded-xl border border-[#e4bfb1]/10 shadow-sm">
-                  <blockquote className="text-2xl font-medium leading-snug italic text-[#1d1b18]">
-                    "The team at ClientFuel didn't just build a site; they built a revenue engine. The ROI was visible within the first 60 days."
-                  </blockquote>
-                  <div className="mt-8 flex items-center gap-4">
-                    <div className="w-12 h-12 rounded-full bg-[#ece7e2] overflow-hidden">
-                      <img 
-                        referrerPolicy="no-referrer"
-                        src="https://picsum.photos/seed/ceo/100/100" 
-                        alt="Jameson Thorne" 
-                        className="w-full h-full object-cover" 
-                      />
-                    </div>
-                    <div>
-                      <p className="font-bold text-[#1d1b18]">Jameson Thorne</p>
-                      <p className="text-xs uppercase tracking-widest text-[#5b4137]">CEO, Altus Group</p>
-                    </div>
-                  </div>
-                </div>
-              </FadeIn>
-            </div>
+          <div className="max-w-7xl mx-auto px-8 relative text-center">
+            <FadeIn>
+              <h2 className="text-[3.5rem] font-black mb-8 text-[#1d1b18] leading-[1.1]">Ready to grow your business?</h2>
+              <p className="text-xl text-[#5b4137] mb-12 max-w-2xl mx-auto leading-relaxed">
+                Stop guessing. Start growing. Let's build a website that brings you real customers.
+              </p>
+              <Button to="/contact" size="lg">
+                Book a Call Now
+              </Button>
+            </FadeIn>
           </div>
         </section>
       </main>

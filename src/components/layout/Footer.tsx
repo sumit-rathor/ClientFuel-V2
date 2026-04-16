@@ -43,11 +43,11 @@ export const Footer = () => {
               Connect
             </h5>
             <div className="flex flex-col gap-4">
-              <a href="mailto:clientfuel.in@gmail.com" className="group flex items-center gap-3 text-sm font-medium text-[#5b4137] hover:text-[#fb5c01] transition-colors">
+              <a href="mailto:contact@clientfuel.in" className="group flex items-center gap-3 text-sm font-medium text-[#5b4137] hover:text-[#fb5c01] transition-colors">
                 <div className="w-8 h-8 rounded-full bg-white flex items-center justify-center border border-[#e4bfb1]/20 group-hover:border-[#fb5c01]/30 transition-colors">
                   <Mail className="w-4 h-4" />
                 </div>
-                clientfuel.in@gmail.com
+                contact@clientfuel.in
               </a>
               <a href="https://wa.me/917727995722" target="_blank" rel="noopener noreferrer" className="group flex items-center gap-3 text-sm font-medium text-[#5b4137] hover:text-[#fb5c01] transition-colors">
                 <div className="w-8 h-8 rounded-full bg-white flex items-center justify-center border border-[#e4bfb1]/20 group-hover:border-[#fb5c01]/30 transition-colors">
