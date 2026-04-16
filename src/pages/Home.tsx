@@ -13,7 +13,7 @@ export const Home = () => {
       </Helmet>
 
       {/* Hero Section */}
-      <section className="min-h-[90vh] flex items-center px-8">
+      <section className="min-h-[95vh] flex items-center px-8 pt-24 lg:pt-32">
         <div className="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-12">
           <div className="lg:col-span-8 flex flex-col justify-center">
             <FadeIn direction="right" delay={0.1}>
@@ -23,7 +23,7 @@ export const Home = () => {
             </FadeIn>
             <FadeIn direction="right" delay={0.2}>
               <h1 className="text-[3.5rem] md:text-[5rem] lg:text-[6rem] leading-[1.05] font-black tracking-[-0.04em] text-[#1d1b18] mb-10">
-                Websites that get clients — <span className="text-[#fb5c01]">Web Design Agency in India.</span>
+                Where Great Design Meets <span className="text-[#fb5c01]">Real Results.</span>
               </h1>
             </FadeIn>
             <FadeIn direction="right" delay={0.3}>

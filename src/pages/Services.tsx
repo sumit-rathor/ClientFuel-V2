@@ -9,7 +9,7 @@ export const Services = () => {
       id: "01",
       title: "Website Design",
       description: "We build trust instantly. Your website is your digital shop. We make sure it looks professional and premium, so your customers feel safe buying from you.",
-      image: "https://picsum.photos/seed/design/800/450",
+      image: "/website-design.png",
       features: [
         "Professional look that builds trust",
         "Easy for customers to find information",
@@ -20,7 +20,7 @@ export const Services = () => {
       id: "02",
       title: "Website Development",
       description: "Fast, reliable, and mobile-first. Most of your customers in India will visit from their phones. We ensure your site is blazing fast and works perfectly on every device.",
-      image: "https://picsum.photos/seed/code/800/450",
+      image: "/website-development.png",
       features: [
         "Super fast loading on mobile data",
         "Secure and reliable hosting",
@@ -31,7 +31,7 @@ export const Services = () => {
       id: "03",
       title: "Conversion Optimization",
       description: "Turns visitors into paying customers. We don't just want people to see your site; we want them to call you. We optimize your site to get you more inquiries.",
-      image: "https://picsum.photos/seed/data/800/450",
+      image: "/conversion-optimization.png",
       features: [
         "WhatsApp and Call button integration",
         "Easy-to-fill inquiry forms",
