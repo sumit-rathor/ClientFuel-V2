@@ -115,32 +115,36 @@ export const Home = () => {
             </FadeIn>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-20">
-            <FadeIn className="group cursor-pointer">
-              <div className="aspect-[4/5] overflow-hidden rounded-lg bg-[#ded9d4] mb-8">
-                <img 
-                  referrerPolicy="no-referrer"
-                  src="https://picsum.photos/seed/re/800/1000" 
-                  alt="Real Estate Website" 
-                  className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" 
-                />
-              </div>
-              <p className="text-[0.7rem] uppercase tracking-widest text-[#fb5c01] font-bold mb-2">Real Estate</p>
-              <h3 className="text-2xl font-black text-[#1d1b18]">Luxury Estates Collective</h3>
-              <p className="text-[#5b4137] mt-2">Real estate website designed to increase inquiries and property viewings.</p>
-            </FadeIn>
-            <FadeIn className="group cursor-pointer md:mt-32">
-              <div className="aspect-[4/5] overflow-hidden rounded-lg bg-[#ded9d4] mb-8">
-                <img 
-                  referrerPolicy="no-referrer"
-                  src="https://picsum.photos/seed/edu/800/1000" 
-                  alt="School Website" 
-                  className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" 
-                />
-              </div>
-              <p className="text-[0.7rem] uppercase tracking-widest text-[#fb5c01] font-bold mb-2">Education</p>
-              <h3 className="text-2xl font-black text-[#1d1b18]">The Heights Academy</h3>
-              <p className="text-[#5b4137] mt-2">School website built for better parent engagement and admission inquiries.</p>
-            </FadeIn>
+            <a href="https://royal-horizon-realty.vercel.app/" target="_blank" rel="noopener noreferrer" className="group cursor-pointer">
+              <FadeIn>
+                <div className="aspect-video overflow-hidden rounded-lg bg-[#ded9d4] mb-8 border border-[#e4bfb1]/10">
+                  <img 
+                    referrerPolicy="no-referrer"
+                    src="/royal_horizon_realty.png" 
+                    alt="Royal Horizon Realty" 
+                    className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" 
+                  />
+                </div>
+                <p className="text-[0.7rem] uppercase tracking-widest text-[#fb5c01] font-bold mb-2">Luxury Real Estate</p>
+                <h3 className="text-2xl font-black text-[#1d1b18]">Royal Horizon Realty</h3>
+                <p className="text-[#5b4137] mt-2">A modern luxury real estate website crafted to showcase premium Jaipur properties with elegance, trust, and high-converting design.</p>
+              </FadeIn>
+            </a>
+            <a href="https://iron-forge-fitness-gym.vercel.app/" target="_blank" rel="noopener noreferrer" className="group cursor-pointer md:mt-32">
+              <FadeIn>
+                <div className="aspect-video overflow-hidden rounded-lg bg-[#ded9d4] mb-8 border border-[#e4bfb1]/10">
+                  <img 
+                    referrerPolicy="no-referrer"
+                    src="/iron_forge_fitness.png" 
+                    alt="Iron Forge Fitness" 
+                    className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" 
+                  />
+                </div>
+                <p className="text-[0.7rem] uppercase tracking-widest text-[#fb5c01] font-bold mb-2">Fitness & Gym</p>
+                <h3 className="text-2xl font-black text-[#1d1b18]">Iron Forge Fitness</h3>
+                <p className="text-[#5b4137] mt-2">A bold and energetic gym website built to attract members, highlight services, and reflect a professional fitness brand.</p>
+              </FadeIn>
+            </a>
           </div>
         </div>
       </section>

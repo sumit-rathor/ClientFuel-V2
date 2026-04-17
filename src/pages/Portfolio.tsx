@@ -7,36 +7,22 @@ export const Portfolio = () => {
   const projects = [
     {
       id: 1,
-      title: "Real Estate Website",
-      category: "Architecture & Dev",
-      description: "Designed to increase property inquiries and trust for a luxury real estate firm.",
-      image: "https://picsum.photos/seed/re/800/1000",
-      size: "large"
-    },
-    {
-      id: 2,
-      title: "Direct-to-Consumer Tech",
-      category: "Brand & UI/UX",
-      description: "A clean, modern interface built to turn tech enthusiasts into loyal customers.",
-      image: "https://picsum.photos/seed/tech/800/1000",
-      size: "large",
-      offset: true
-    },
-    {
-      id: 3,
-      title: "Enterprise Rebrand",
-      category: "Strategy",
-      description: "Repositioning a traditional business as a modern market leader in India.",
-      image: "https://picsum.photos/seed/corp/800/600",
+      title: "Royal Horizon Realty",
+      category: "Luxury Real Estate",
+      description: "A modern luxury real estate website crafted to showcase premium Jaipur properties with elegance, trust, and high-converting design.",
+      image: "/royal_horizon_realty.png",
+      link: "https://royal-horizon-realty.vercel.app/",
       size: "wide"
     },
     {
-      id: 4,
-      title: "Fashion Platform",
-      category: "Full-Stack Dev",
-      description: "A fast-loading retail site built for better mobile shopping engagement.",
-      image: "https://picsum.photos/seed/fashion/800/1000",
-      size: "large"
+      id: 2,
+      title: "Iron Forge Fitness",
+      category: "Fitness & Gym",
+      description: "A bold and energetic gym website built to attract members, highlight services, and reflect a professional fitness brand.",
+      image: "/iron_forge_fitness.png",
+      link: "https://iron-forge-fitness-gym.vercel.app/",
+      size: "wide",
+      offset: true
     }
   ];
 
@@ -65,8 +51,13 @@ export const Portfolio = () => {
                 key={project.id} 
                 className={project.offset ? "md:mt-32" : ""}
               >
-                <div className="group cursor-pointer">
-                  <div className={`overflow-hidden rounded-lg bg-[#f8f3ed] mb-6 ${project.size === 'wide' ? 'aspect-[4/3]' : 'aspect-[4/5]'}`}>
+                <a 
+                  href={project.link} 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="group cursor-pointer block"
+                >
+                  <div className={`overflow-hidden rounded-lg bg-[#f8f3ed] mb-6 border border-[#e4bfb1]/10 ${project.size === 'wide' ? 'aspect-video' : 'aspect-[4/5]'}`}>
                     <img 
                       referrerPolicy="no-referrer"
                       className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 ease-out scale-105 group-hover:scale-100" 
@@ -82,7 +73,7 @@ export const Portfolio = () => {
                     </div>
                     <ArrowUpRight className="text-[#5b4137] group-hover:text-[#fb5c01] transition-colors duration-300" />
                   </div>
-                </div>
+                </a>
               </FadeIn>
             ))}
           </StaggerContainer>
