@@ -83,20 +83,20 @@ export const Home = () => {
               <p className="text-[#5b4137] leading-relaxed">We don't just build sites; we build business tools that help Indian small businesses grow their client base.</p>
             </FadeIn>
           </div>
-          <StaggerContainer className="grid grid-cols-1 md:grid-cols-3 gap-1 px-1 bg-[#e4bfb1]/10">
-            <FadeIn className="bg-white p-12 hover:bg-[#f8f3ed] transition-colors group">
-              <Brush className="w-10 h-10 text-[#ffb599] group-hover:text-[#fb5c01] mb-8 transition-colors" />
-              <h3 className="text-xl font-black mb-4">Website Design</h3>
+          <StaggerContainer className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <FadeIn className="bg-white p-12 rounded-xl shadow-sm border border-[#e4bfb1]/10 transition-all duration-300 group hover:shadow-xl hover:-translate-y-2 hover:bg-[#fef9f2]">
+              <Brush className="w-10 h-10 text-[#ffb599] group-hover:text-[#fb5c01] mb-8 transition-all duration-300 group-hover:scale-110" />
+              <h3 className="text-xl font-black mb-4 transition-colors duration-300 group-hover:text-[#fb5c01]">Website Design</h3>
               <p className="text-[#5b4137] leading-relaxed">Builds trust instantly with your customers through clean, professional, and premium layouts.</p>
             </FadeIn>
-            <FadeIn className="bg-white p-12 hover:bg-[#f8f3ed] transition-colors group">
-              <Code className="w-10 h-10 text-[#ffb599] group-hover:text-[#fb5c01] mb-8 transition-colors" />
-              <h3 className="text-xl font-black mb-4">Website Development</h3>
+            <FadeIn className="bg-white p-12 rounded-xl shadow-sm border border-[#e4bfb1]/10 transition-all duration-300 group hover:shadow-xl hover:-translate-y-2 hover:bg-[#fef9f2]">
+              <Code className="w-10 h-10 text-[#ffb599] group-hover:text-[#fb5c01] mb-8 transition-all duration-300 group-hover:scale-110" />
+              <h3 className="text-xl font-black mb-4 transition-colors duration-300 group-hover:text-[#fb5c01]">Website Development</h3>
               <p className="text-[#5b4137] leading-relaxed">Fast, reliable, and mobile-first. Your website will look perfect on every smartphone in India.</p>
             </FadeIn>
-            <FadeIn className="bg-white p-12 hover:bg-[#f8f3ed] transition-colors group">
-              <TrendingUp className="w-10 h-10 text-[#ffb599] group-hover:text-[#fb5c01] mb-8 transition-colors" />
-              <h3 className="text-xl font-black mb-4">Conversion Optimization</h3>
+            <FadeIn className="bg-white p-12 rounded-xl shadow-sm border border-[#e4bfb1]/10 transition-all duration-300 group hover:shadow-xl hover:-translate-y-2 hover:bg-[#fef9f2]">
+              <TrendingUp className="w-10 h-10 text-[#ffb599] group-hover:text-[#fb5c01] mb-8 transition-all duration-300 group-hover:scale-110" />
+              <h3 className="text-xl font-black mb-4 transition-colors duration-300 group-hover:text-[#fb5c01]">Conversion Optimization</h3>
               <p className="text-[#5b4137] leading-relaxed">Turns visitors into paying customers by making it easy for them to contact you and book your services.</p>
             </FadeIn>
           </StaggerContainer>
@@ -111,7 +111,10 @@ export const Home = () => {
               <h2 className="text-[2.5rem] font-black tracking-tight text-[#1d1b18]">Selected Work</h2>
             </FadeIn>
             <FadeIn direction="left">
-              <Link to="/portfolio" className="text-sm font-bold text-[#fb5c01] border-b-2 border-[#fb5c01] pb-1">View All Projects</Link>
+              <Link to="/portfolio" className="text-sm font-bold text-[#fb5c01] relative group pb-1">
+                View All Projects
+                <span className="absolute bottom-0 left-0 w-full h-0.5 bg-[#fb5c01] transition-transform duration-300 origin-left scale-x-0 group-hover:scale-x-100" />
+              </Link>
             </FadeIn>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-20">
@@ -198,9 +201,9 @@ export const Home = () => {
             <p className="text-[#5b4137] mt-4">No hidden fees. No surprises. One-time payment.</p>
           </FadeIn>
           <StaggerContainer className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <FadeIn className="bg-white p-10 rounded-xl border border-[#e4bfb1]/10 flex flex-col">
-              <h3 className="text-xl font-bold text-[#1d1b18]">Starter Website</h3>
-              <div className="text-4xl font-black text-[#fb5c01] my-6">₹9,999</div>
+            <FadeIn className="bg-white p-10 rounded-xl border border-[#e4bfb1]/10 flex flex-col transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 group">
+              <h3 className="text-xl font-bold text-[#1d1b18] group-hover:text-[#fb5c01] transition-colors">Starter Website</h3>
+              <div className="text-4xl font-black text-[#fb5c01] my-6 transition-transform duration-300 group-hover:scale-110 origin-left">₹9,999</div>
               <p className="text-sm text-[#5b4137] mb-8">Perfect for small shops and individual service providers.</p>
               <ul className="space-y-4 mb-10 flex-grow">
                 <li className="flex items-center gap-2 text-sm"><CheckCircle size={16} className="text-[#fb5c01]" /> Up to 5 pages (Home, About, etc.)</li>
@@ -213,10 +216,10 @@ export const Home = () => {
               </ul>
               <Button to="/contact" variant="outline" className="w-full">Get Started</Button>
             </FadeIn>
-            <FadeIn className="bg-white p-10 rounded-xl border-2 border-[#fb5c01] flex flex-col relative scale-105 shadow-xl">
-              <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-[#fb5c01] text-white text-[10px] font-bold uppercase tracking-widest px-4 py-1 rounded-full">Most Popular</div>
-              <h3 className="text-xl font-bold text-[#1d1b18]">Growth Website</h3>
-              <div className="text-4xl font-black text-[#fb5c01] my-6">₹14,999</div>
+            <FadeIn className="bg-white p-10 rounded-xl border-2 border-[#fb5c01] flex flex-col relative scale-105 shadow-xl transition-all duration-300 hover:shadow-2xl hover:-translate-y-3 group z-10">
+              <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-[#fb5c01] text-white text-[10px] font-bold uppercase tracking-widest px-4 py-1 rounded-full shadow-lg">Most Popular</div>
+              <h3 className="text-xl font-bold text-[#1d1b18] group-hover:text-[#fb5c01] transition-colors">Growth Website</h3>
+              <div className="text-4xl font-black text-[#fb5c01] my-6 transition-transform duration-300 group-hover:scale-110 origin-left">₹14,999</div>
               <p className="text-sm text-[#5b4137] mb-8">Best for growing businesses needing a professional presence.</p>
               <ul className="space-y-4 mb-10 flex-grow">
                 <li className="flex items-center gap-2 text-sm"><CheckCircle size={16} className="text-[#fb5c01]" /> Up to 8 pages</li>
@@ -230,9 +233,9 @@ export const Home = () => {
               </ul>
               <Button to="/contact" className="w-full">Get Started</Button>
             </FadeIn>
-            <FadeIn className="bg-white p-10 rounded-xl border border-[#e4bfb1]/10 flex flex-col">
-              <h3 className="text-xl font-bold text-[#1d1b18]">Premium Website</h3>
-              <div className="text-4xl font-black text-[#fb5c01] my-6">₹19,999</div>
+            <FadeIn className="bg-white p-10 rounded-xl border border-[#e4bfb1]/10 flex flex-col transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 group">
+              <h3 className="text-xl font-bold text-[#1d1b18] group-hover:text-[#fb5c01] transition-colors">Premium Website</h3>
+              <div className="text-4xl font-black text-[#fb5c01] my-6 transition-transform duration-300 group-hover:scale-110 origin-left">₹19,999</div>
               <p className="text-sm text-[#5b4137] mb-8">For businesses that want the absolute best performance.</p>
               <ul className="space-y-4 mb-10 flex-grow">
                 <li className="flex items-center gap-2 text-sm"><CheckCircle size={16} className="text-[#fb5c01]" /> Up to 12 pages</li>

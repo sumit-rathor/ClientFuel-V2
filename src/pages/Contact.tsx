@@ -58,25 +58,29 @@ export const Contact = () => {
               {/* Quick Options */}
               <FadeIn direction="right" delay={0.2} className="space-y-4 pt-4">
                 <h4 className="text-[0.75rem] uppercase tracking-[0.1em] text-[#5b4137] font-bold">Quick Connect</h4>
-                <div className="flex flex-col gap-3">
-                  <a href="https://wa.me/917727995722" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-[#1d1b18] hover:text-[#fb5c01] transition-colors group">
-                    <svg
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      className="w-[18px] h-[18px] text-[#fb5c01]"
-                    >
-                      <path d="M21 12a9 9 0 0 1-9 9c-1.5 0-3-.4-4.3-1.1L3 21l1.1-5.7C3.4 14 3 12.5 3 11a9 9 0 1 1 18 1z" />
-                      <path d="M17.47 14.39c-.34-.17-2.01-.99-2.32-1.11-.31-.11-.54-.17-.77.17-.23.34-.89 1.11-1.09 1.34-.2.23-.4.26-.74.09-.34-.17-1.44-.53-2.74-1.69-1.01-.9-1.69-2.01-1.89-2.35-.2-.34-.02-.52.15-.69.15-.15.34-.4.51-.6.17-.2.23-.34.34-.57.11-.23.06-.43-.03-.6-.09-.17-.77-1.86-1.06-2.54-.28-.67-.56-.58-.77-.59-.2-.01-.43-.01-.66-.01-.23 0-.6.09-.91.43-.31.34-1.19 1.16-1.19 2.83 0 1.67 1.22 3.28 1.39 3.51.17.23 2.4 3.66 5.81 5.13.81.35 1.44.56 1.93.72.82.26 1.56.22 2.15.14.65-.1 2.01-.82 2.29-1.61.28-.79.28-1.47.2-1.61-.09-.14-.31-.22-.65-.39z" />
-                    </svg>
-                    <span className="text-sm font-medium">WhatsApp Support: +91 7727995722</span>
+                <div className="flex flex-col gap-4">
+                  <a href="https://wa.me/917727995722" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 text-[#1d1b18] hover:text-[#fb5c01] transition-all duration-300 group hover:translate-x-2">
+                    <div className="w-10 h-10 rounded-full bg-white flex items-center justify-center border border-[#e4bfb1]/20 group-hover:bg-[#fb5c01] group-hover:border-[#fb5c01] transition-all duration-300 shadow-sm group-hover:shadow-lg group-hover:shadow-[#fb5c01]/20">
+                      <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        className="w-[18px] h-[18px] text-[#fb5c01] group-hover:text-white transition-colors animate-pulsate"
+                      >
+                        <path d="M21 12a9 9 0 0 1-9 9c-1.5 0-3-.4-4.3-1.1L3 21l1.1-5.7C3.4 14 3 12.5 3 11a9 9 0 1 1 18 1z" />
+                        <path d="M17.47 14.39c-.34-.17-2.01-.99-2.32-1.11-.31-.11-.54-.17-.77.17-.23.34-.89 1.11-1.09 1.34-.2.23-.4.26-.74.09-.34-.17-1.44-.53-2.74-1.69-1.01-.9-1.69-2.01-1.89-2.35-.2-.34-.02-.52.15-.69.15-.15.34-.4.51-.6.17-.2.23-.34.34-.57.11-.23.06-.43-.03-.6-.09-.17-.77-1.86-1.06-2.54-.28-.67-.56-.58-.77-.59-.2-.01-.43-.01-.66-.01-.23 0-.6.09-.91.43-.31.34-1.19 1.16-1.19 2.83 0 1.67 1.22 3.28 1.39 3.51.17.23 2.4 3.66 5.81 5.13.81.35 1.44.56 1.93.72.82.26 1.56.22 2.15.14.65-.1 2.01-.82 2.29-1.61.28-.79.28-1.47.2-1.61-.09-.14-.31-.22-.65-.39z" />
+                      </svg>
+                    </div>
+                    <span className="text-sm font-bold tracking-tight">WhatsApp Support: +91 7727995722</span>
                   </a>
-                  <a href="mailto:contact@clientfuel.in" className="flex items-center gap-3 text-[#1d1b18] hover:text-[#fb5c01] transition-colors group">
-                    <Mail size={18} className="text-[#fb5c01]" />
-                    <span className="text-sm font-medium">Email: contact@clientfuel.in</span>
+                  <a href="mailto:contact@clientfuel.in" className="flex items-center gap-4 text-[#1d1b18] hover:text-[#fb5c01] transition-all duration-300 group hover:translate-x-2">
+                    <div className="w-10 h-10 rounded-full bg-white flex items-center justify-center border border-[#e4bfb1]/20 group-hover:bg-[#fb5c01] group-hover:border-[#fb5c01] transition-all duration-300 shadow-sm group-hover:shadow-lg group-hover:shadow-[#fb5c01]/20">
+                      <Mail size={18} className="text-[#fb5c01] group-hover:text-white transition-colors" />
+                    </div>
+                    <span className="text-sm font-bold tracking-tight">Email: contact@clientfuel.in</span>
                   </a>
                 </div>
                 <p className="text-xs text-[#8f7065]">We usually respond within 2-4 hours.</p>
@@ -134,10 +138,10 @@ export const Contact = () => {
                                 key={option}
                                 type="button"
                                 onClick={() => setSelectedService(option)}
-                                className={`px-5 py-2 rounded-full border text-xs font-bold uppercase tracking-widest transition-all ${
+                                className={`px-5 py-2 rounded-full border text-xs font-bold uppercase tracking-widest transition-all duration-300 ${
                                   selectedService === option 
-                                    ? "bg-[#fb5c01] border-[#fb5c01] text-white" 
-                                    : "border-[#e4bfb1]/50 hover:bg-[#fb5c01] hover:border-[#fb5c01] hover:text-white"
+                                    ? "bg-[#fb5c01] border-[#fb5c01] text-white shadow-lg shadow-[#fb5c01]/30 scale-105" 
+                                    : "border-[#e4bfb1]/50 hover:bg-[#fb5c01]/10 hover:border-[#fb5c01] hover:text-[#fb5c01] hover:scale-105"
                                 }`}
                               >
                                 {option}
@@ -166,11 +170,13 @@ export const Contact = () => {
 
                       <button 
                         disabled={status === "loading"}
-                        className="inline-flex items-center gap-4 text-[#1d1b18] font-black text-2xl group transition-all disabled:opacity-50 disabled:cursor-not-allowed" 
+                        className="inline-flex items-center gap-4 text-[#1d1b18] font-black text-2xl group transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed hover:text-[#fb5c01] hover:-translate-y-1" 
                         type="submit"
                       >
                         {status === "loading" ? "Sending..." : "Send Message"}
-                        <ArrowRight className="text-[#fb5c01] group-hover:translate-x-2 transition-transform duration-300" />
+                        <div className="w-12 h-12 rounded-full border border-[#fb5c01]/20 flex items-center justify-center transition-all duration-300 group-hover:bg-[#fb5c01] group-hover:border-[#fb5c01] group-hover:shadow-lg group-hover:shadow-[#fb5c01]/30">
+                          <ArrowRight className="text-[#fb5c01] group-hover:text-white group-hover:translate-x-1 transition-all duration-300" />
+                        </div>
                       </button>
                     </form>
                   )}

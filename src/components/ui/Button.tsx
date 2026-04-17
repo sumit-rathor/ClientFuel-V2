@@ -19,13 +19,13 @@ export const Button = ({
   className,
   size = "md",
 }: ButtonProps) => {
-  const baseStyles = "inline-flex items-center justify-center rounded-lg font-bold transition-all duration-300 active:scale-95";
+  const baseStyles = "inline-flex items-center justify-center rounded-lg font-bold transition-all duration-300 ease-in-out active:scale-95 hover:-translate-y-0.5";
   
   const variants = {
-    primary: "bg-gradient-to-br from-[#a73a00] to-[#fb5c01] text-white shadow-xl shadow-[#fb5c01]/10 hover:opacity-90",
-    secondary: "bg-white text-[#1d1b18] hover:bg-[#f8f3ed]",
-    outline: "border border-[#e4bfb1]/30 text-[#1d1b18] hover:bg-[#f8f3ed]",
-    ghost: "text-[#5b4137] hover:text-[#1d1b18] hover:bg-[#f8f3ed]/50",
+    primary: "bg-[#fb5c01] text-white shadow-lg shadow-[#fb5c01]/20 hover:shadow-xl hover:shadow-[#fb5c01]/30 hover:bg-[#ff6d1a] hover:scale-[1.03]",
+    secondary: "bg-white text-[#1d1b18] shadow-sm hover:shadow-md hover:bg-[#fafafa] hover:scale-[1.03]",
+    outline: "border-2 border-[#fb5c01]/30 text-[#1d1b18] hover:border-[#fb5c01]/60 hover:bg-[#fb5c01]/5 hover:scale-[1.03]",
+    ghost: "text-[#5b4137] hover:text-[#fb5c01] hover:bg-[#fb5c01]/5 hover:translate-x-1",
   };
 
   const sizes = {

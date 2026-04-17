@@ -41,9 +41,9 @@ export const Navbar = () => {
       <div className="max-w-7xl mx-auto flex justify-between items-center">
         <Link
           to="/"
-          className="flex items-center"
+          className="flex items-center transition-transform duration-300 hover:scale-110 active:scale-95"
         >
-          <img src="/logo.svg" alt="ClientFuel Logo" className="h-8 w-auto" />
+          <img src="/logo.svg" alt="ClientFuel Logo" className="h-10 w-auto" />
         </Link>
 
         {/* Desktop Nav */}
@@ -53,13 +53,17 @@ export const Navbar = () => {
               key={link.name}
               to={link.path}
               className={cn(
-                "text-sm font-medium tracking-tight transition-all duration-300 hover:text-[#fb5c01]",
+                "text-sm font-medium tracking-tight transition-all duration-300 relative group py-1",
                 location.pathname === link.path
-                  ? "text-[#1d1b18] border-b-2 border-[#fb5c01] pb-1"
-                  : "text-[#5b4137]"
+                  ? "text-[#fb5c01]"
+                  : "text-[#5b4137] hover:text-[#1d1b18]"
               )}
             >
               {link.name}
+              <span className={cn(
+                "absolute bottom-0 left-0 w-full h-0.5 bg-[#fb5c01] transition-transform duration-300 origin-left",
+                location.pathname === link.path ? "scale-x-100" : "scale-x-0 group-hover:scale-x-100"
+              )} />
             </Link>
           ))}
           <Button to="/contact" size="sm">

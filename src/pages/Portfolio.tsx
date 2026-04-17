@@ -68,10 +68,12 @@ export const Portfolio = () => {
                   <div className="flex justify-between items-end">
                     <div>
                       <span className="text-[10px] uppercase tracking-widest text-[#fb5c01] font-bold mb-2 block">{project.category}</span>
-                      <h3 className="text-[1.75rem] font-bold tracking-tight text-[#1d1b18]">{project.title}</h3>
+                      <h3 className="text-[1.75rem] font-bold tracking-tight text-[#1d1b18] group-hover:text-[#fb5c01] transition-colors duration-300">{project.title}</h3>
                       <p className="text-sm text-[#5b4137] mt-2 max-w-xs">{project.description}</p>
                     </div>
-                    <ArrowUpRight className="text-[#5b4137] group-hover:text-[#fb5c01] transition-colors duration-300" />
+                    <div className="w-12 h-12 rounded-full border border-[#e4bfb1]/30 flex items-center justify-center transition-all duration-300 group-hover:bg-[#fb5c01] group-hover:border-[#fb5c01] group-hover:-translate-y-2 group-hover:translate-x-2">
+                      <ArrowUpRight className="text-[#1d1b18] group-hover:text-white transition-colors duration-300 w-5 h-5" />
+                    </div>
                   </div>
                 </a>
               </FadeIn>
