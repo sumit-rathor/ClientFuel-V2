@@ -10,7 +10,7 @@ export const Footer = () => {
           <div className="md:col-span-5 space-y-8">
             <Link to="/" className="flex items-center transition-transform duration-300 hover:scale-105 active:scale-95 w-fit">
               <img src="/logo.svg" alt="ClientFuel Logo" className="h-10 w-auto" />
-              <span className="ml-3 text-xl font-medium tracking-[0.02em] text-[#1d1b18]">ClientFuel</span>
+              <span className="ml-2.5 text-2xl font-black tracking-[-0.04em] text-[#1d1b18]">ClientFuel</span>
             </Link>
             <p className="text-base text-[#5b4137] leading-relaxed max-w-sm">
               We build high-performance websites for local Indian businesses. Our mission is simple: to turn your online presence into a client-generating machine.

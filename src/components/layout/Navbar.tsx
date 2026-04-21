@@ -44,7 +44,7 @@ export const Navbar = () => {
           className="flex items-center transition-transform duration-300 hover:scale-110 active:scale-95"
         >
           <img src="/logo.svg" alt="ClientFuel Logo" className="h-10 w-auto" />
-          <span className="ml-3 text-xl font-medium tracking-[0.02em] text-[#1d1b18]">ClientFuel</span>
+          <span className="ml-2.5 text-2xl font-black tracking-[-0.04em] text-[#1d1b18]">ClientFuel</span>
         </Link>
 
         {/* Desktop Nav */}
