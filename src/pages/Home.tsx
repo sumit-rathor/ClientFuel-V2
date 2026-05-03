@@ -161,8 +161,8 @@ export const Home = () => {
           <StaggerContainer className="grid grid-cols-1 md:grid-cols-3 gap-12">
             <FadeIn className="space-y-4">
               <Zap className="text-[#fb5c01] w-8 h-8" />
-              <h3 className="text-xl font-bold text-[#1d1b18]">Fast 3–7 Day Delivery</h3>
-              <p className="text-[#5b4137]">We value your time. Get your professional business website live in less than a week.</p>
+              <h3 className="text-xl font-bold text-[#1d1b18]">Fast 7-10 Day Delivery</h3>
+              <p className="text-[#5b4137]">We value your time. Get your professional business website live in around 7-10 days.</p>
             </FadeIn>
             <FadeIn className="space-y-4">
               <ShieldCheck className="text-[#fb5c01] w-8 h-8" />
