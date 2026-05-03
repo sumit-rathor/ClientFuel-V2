@@ -10,7 +10,7 @@ export const Portfolio = () => {
       title: "Royal Horizon Realty",
       category: "Luxury Real Estate",
       description: "A modern luxury real estate website crafted to showcase premium Jaipur properties with elegance, trust, and high-converting design.",
-      image: "/royal-horizon-realty.webp",
+      image: `${import.meta.env.BASE_URL}royal-horizon-realty.webp`,
       link: "https://royal-horizon-realty.vercel.app/",
       size: "wide"
     },
@@ -19,7 +19,7 @@ export const Portfolio = () => {
       title: "Iron Forge Fitness",
       category: "Fitness & Gym",
       description: "A bold and energetic gym website built to attract members, highlight services, and reflect a professional fitness brand.",
-      image: "/iron-forge-fitness.webp",
+      image: `${import.meta.env.BASE_URL}iron-forge-fitness.webp`,
       link: "https://iron-forge-fitness-gym.vercel.app/",
       size: "wide",
       offset: true
