@@ -123,7 +123,7 @@ export const Home = () => {
                 <div className="aspect-video overflow-hidden rounded-lg bg-[#ded9d4] mb-8 border border-[#e4bfb1]/10">
                   <img 
                     referrerPolicy="no-referrer"
-                    src="/royal_horizon_realty.png" 
+                    src="/royal-horizon-realty.webp" 
                     alt="Royal Horizon Realty" 
                     className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" 
                   />
@@ -138,7 +138,7 @@ export const Home = () => {
                 <div className="aspect-video overflow-hidden rounded-lg bg-[#ded9d4] mb-8 border border-[#e4bfb1]/10">
                   <img 
                     referrerPolicy="no-referrer"
-                    src="/iron_forge_fitness.png" 
+                    src="/iron-forge-fitness.webp" 
                     alt="Iron Forge Fitness" 
                     className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" 
                   />
@@ -201,53 +201,100 @@ export const Home = () => {
             <p className="text-[#5b4137] mt-4">No hidden fees. No surprises. One-time payment.</p>
           </FadeIn>
           <StaggerContainer className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <FadeIn className="bg-white p-10 rounded-xl border border-[#e4bfb1]/10 flex flex-col transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 group">
-              <h3 className="text-xl font-bold text-[#1d1b18] group-hover:text-[#fb5c01] transition-colors">Starter Website</h3>
-              <div className="text-4xl font-black text-[#fb5c01] my-6 transition-transform duration-300 group-hover:scale-110 origin-left">₹9,999</div>
-              <p className="text-sm text-[#5b4137] mb-8">Perfect for small shops and individual service providers.</p>
-              <ul className="space-y-4 mb-10 flex-grow">
-                <li className="flex items-center gap-2 text-sm"><CheckCircle size={16} className="text-[#fb5c01]" /> Up to 5 pages (Home, About, etc.)</li>
-                <li className="flex items-center gap-2 text-sm"><CheckCircle size={16} className="text-[#fb5c01]" /> Mobile responsive design</li>
-                <li className="flex items-center gap-2 text-sm"><CheckCircle size={16} className="text-[#fb5c01]" /> Clean template-based UI</li>
-                <li className="flex items-center gap-2 text-sm"><CheckCircle size={16} className="text-[#fb5c01]" /> Basic on-page SEO setup</li>
-                <li className="flex items-center gap-2 text-sm"><CheckCircle size={16} className="text-[#fb5c01]" /> Contact form + WhatsApp</li>
-                <li className="flex items-center gap-2 text-sm"><CheckCircle size={16} className="text-[#fb5c01]" /> Fast loading & Free SSL</li>
-                <li className="flex items-center gap-2 text-sm"><CheckCircle size={16} className="text-[#fb5c01]" /> 1 round of revisions</li>
+            <FadeIn className="bg-white p-10 lg:p-12 rounded-3xl border border-[#e4bfb1]/20 flex flex-col transition-all duration-500 hover:shadow-[0_30px_60px_-15px_rgba(251,92,1,0.15)] hover:-translate-y-2 group relative overflow-hidden">
+              <div className="absolute top-0 right-0 w-32 h-32 bg-[#fb5c01]/5 rounded-bl-full -mr-16 -mt-16 transition-transform duration-500 group-hover:scale-150"></div>
+              
+              <p className="text-[10px] text-[#fb5c01] font-black uppercase tracking-[0.2em] mb-4">Discovery Tier</p>
+              <h3 className="text-3xl font-black text-[#1d1b18] mb-6 group-hover:text-[#fb5c01] transition-colors">Launch</h3>
+              
+              <p className="text-base text-[#5b4137] mb-8 font-medium italic border-l-2 border-[#fb5c01]/20 pl-4">“Get your business online with a professional, trust-building presence”</p>
+              
+              <div className="flex items-baseline gap-1 mb-8">
+                <span className="text-4xl font-black text-[#1d1b18]">₹27,000</span>
+                <span className="text-[#5b4137]/60 text-sm font-bold uppercase">One-time</span>
+              </div>
+
+              <ul className="space-y-4 mb-10 flex-grow relative z-10">
+                <li className="flex items-center gap-3 text-sm font-medium text-[#5b4137]"><CheckCircle size={18} className="text-[#fb5c01] shrink-0" /> Strong first impression website</li>
+                <li className="flex items-center gap-3 text-sm font-medium text-[#5b4137]"><CheckCircle size={18} className="text-[#fb5c01] shrink-0" /> Mobile-first design</li>
+                <li className="flex items-center gap-3 text-sm font-medium text-[#5b4137]"><CheckCircle size={18} className="text-[#fb5c01] shrink-0" /> Enquiry-ready (WhatsApp + forms)</li>
+                <li className="flex items-center gap-3 text-sm font-medium text-[#5b4137]"><CheckCircle size={18} className="text-[#fb5c01] shrink-0" /> Clean, fast, modern UI</li>
+                
+                <li className="mt-8 pt-8 border-t border-[#e4bfb1]/20">
+                  <div className="flex items-center gap-2 text-[10px] font-black text-[#1d1b18] mb-4 uppercase tracking-[0.2em] opacity-50">Business Outcome</div>
+                  <div className="space-y-3">
+                    <div className="flex items-center gap-3 text-sm text-[#1d1b18] font-bold py-2 px-4 bg-[#f8f3ed] rounded-lg border border-[#e4bfb1]/10"><BadgeCheck size={18} className="text-green-600" /> You look legit</div>
+                    <div className="flex items-center gap-3 text-sm text-[#1d1b18] font-bold py-2 px-4 bg-[#f8f3ed] rounded-lg border border-[#e4bfb1]/10"><BadgeCheck size={18} className="text-green-600" /> Stop losing customers</div>
+                  </div>
+                </li>
               </ul>
-              <Button to="/contact" variant="outline" className="w-full">Get Started</Button>
+              <Button to="/contact" variant="outline" className="w-full py-6 rounded-2xl border-2 hover:bg-[#fb5c01] hover:text-white transition-all duration-300">Get Started</Button>
             </FadeIn>
-            <FadeIn className="bg-white p-10 rounded-xl border-2 border-[#fb5c01] flex flex-col relative scale-105 shadow-xl transition-all duration-300 hover:shadow-2xl hover:-translate-y-3 group z-10">
-              <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-[#fb5c01] text-white text-[10px] font-bold uppercase tracking-widest px-4 py-1 rounded-full shadow-lg">Most Popular</div>
-              <h3 className="text-xl font-bold text-[#1d1b18] group-hover:text-[#fb5c01] transition-colors">Growth Website</h3>
-              <div className="text-4xl font-black text-[#fb5c01] my-6 transition-transform duration-300 group-hover:scale-110 origin-left">₹14,999</div>
-              <p className="text-sm text-[#5b4137] mb-8">Best for growing businesses needing a professional presence.</p>
-              <ul className="space-y-4 mb-10 flex-grow">
-                <li className="flex items-center gap-2 text-sm"><CheckCircle size={16} className="text-[#fb5c01]" /> Up to 8 pages</li>
-                <li className="flex items-center gap-2 text-sm"><CheckCircle size={16} className="text-[#fb5c01]" /> Custom-designed UI</li>
-                <li className="flex items-center gap-2 text-sm"><CheckCircle size={16} className="text-[#fb5c01]" /> Everything in Starter +</li>
-                <li className="flex items-center gap-2 text-sm"><CheckCircle size={16} className="text-[#fb5c01]" /> Google Maps & Social integration</li>
-                <li className="flex items-center gap-2 text-sm"><CheckCircle size={16} className="text-[#fb5c01]" /> Performance tuning</li>
-                <li className="flex items-center gap-2 text-sm"><CheckCircle size={16} className="text-[#fb5c01]" /> Branding consistency</li>
-                <li className="flex items-center gap-2 text-sm"><CheckCircle size={16} className="text-[#fb5c01]" /> Lead-focused sections</li>
-                <li className="flex items-center gap-2 text-sm"><CheckCircle size={16} className="text-[#fb5c01]" /> 2–3 revisions</li>
+
+            <FadeIn className="bg-[#fef9f2] p-10 lg:p-12 rounded-3xl border-2 border-[#fb5c01] flex flex-col relative lg:scale-110 shadow-[0_20px_50px_rgba(251,92,1,0.15)] transition-all duration-500 hover:-translate-y-4 group z-20 overflow-hidden">
+              <div className="absolute top-0 right-0 w-40 h-40 bg-[#fb5c01]/10 rounded-bl-full -mr-20 -mt-20 transition-transform duration-500 group-hover:scale-150"></div>
+              
+              <div className="flex justify-between items-start mb-4">
+                <p className="text-sm text-[#fb5c01] font-black uppercase tracking-[0.2em]">Revenue Engine</p>
+                <div className="bg-[#fb5c01] text-white text-[9px] font-black uppercase tracking-[0.1em] px-3 py-1 rounded-full shadow-md whitespace-nowrap">Most Popular ⭐</div>
+              </div>
+              
+              <h3 className="text-3xl font-black text-[#1d1b18] mb-2 group-hover:text-[#fb5c01] transition-colors">Growth</h3>
+              
+              <p className="text-base text-[#5b4137] mb-8 font-medium italic border-l-2 border-[#fb5c01] pl-4">“Turn your website into a consistent enquiry generator”</p>
+              
+              <div className="flex items-baseline gap-1 mb-8">
+                <span className="text-4xl font-black text-[#1d1b18]">₹42,000</span>
+                <span className="text-[#5b4137]/60 text-sm font-bold uppercase">One-time</span>
+              </div>
+
+              <ul className="space-y-4 mb-10 flex-grow relative z-10">
+                <li className="flex items-center gap-3 text-sm font-medium text-[#1d1b18]"><CheckCircle size={18} className="text-[#fb5c01] shrink-0" /> Everything in Launch</li>
+                <li className="flex items-center gap-3 text-sm font-medium text-[#1d1b18]"><CheckCircle size={18} className="text-[#fb5c01] shrink-0" /> Self-editable website (CMS)</li>
+                <li className="flex items-center gap-3 text-sm font-medium text-[#1d1b18]"><CheckCircle size={18} className="text-[#fb5c01] shrink-0" /> Better page structure</li>
+                <li className="flex items-center gap-3 text-sm font-medium text-[#1d1b18]"><CheckCircle size={18} className="text-[#fb5c01] shrink-0" /> Trust-building sections</li>
+                <li className="flex items-center gap-3 text-sm font-medium text-[#1d1b18]"><CheckCircle size={18} className="text-[#fb5c01] shrink-0" /> SEO-ready setup</li>
+                
+                <li className="mt-8 pt-8 border-t border-[#fb5c01]/10">
+                  <div className="flex items-center gap-2 text-[10px] font-black text-[#1d1b18] mb-4 uppercase tracking-[0.2em] opacity-50">Business Outcome</div>
+                  <div className="space-y-3">
+                    <div className="flex items-center gap-3 text-sm text-[1d1b18] font-bold py-2 px-4 bg-white rounded-lg border border-[#fb5c01]/20 shadow-sm"><BadgeCheck size={18} className="text-green-600" /> More enquiries</div>
+                    <div className="flex items-center gap-3 text-sm text-[1d1b18] font-bold py-2 px-4 bg-white rounded-lg border border-[#fb5c01]/20 shadow-sm"><BadgeCheck size={18} className="text-green-600" /> More trust & control</div>
+                  </div>
+                </li>
               </ul>
-              <Button to="/contact" className="w-full">Get Started</Button>
+              <Button to="/contact" className="w-full py-6 rounded-2xl shadow-[#fb5c01]/40 shadow-xl hover:scale-[1.02] transform transition-all duration-300">Get Started</Button>
             </FadeIn>
-            <FadeIn className="bg-white p-10 rounded-xl border border-[#e4bfb1]/10 flex flex-col transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 group">
-              <h3 className="text-xl font-bold text-[#1d1b18] group-hover:text-[#fb5c01] transition-colors">Premium Website</h3>
-              <div className="text-4xl font-black text-[#fb5c01] my-6 transition-transform duration-300 group-hover:scale-110 origin-left">₹19,999</div>
-              <p className="text-sm text-[#5b4137] mb-8">For businesses that want the absolute best performance.</p>
-              <ul className="space-y-4 mb-10 flex-grow">
-                <li className="flex items-center gap-2 text-sm"><CheckCircle size={16} className="text-[#fb5c01]" /> Up to 12 pages</li>
-                <li className="flex items-center gap-2 text-sm"><CheckCircle size={16} className="text-[#fb5c01]" /> Fully custom modern UI/UX</li>
-                <li className="flex items-center gap-2 text-sm"><CheckCircle size={16} className="text-[#fb5c01]" /> Everything in Growth +</li>
-                <li className="flex items-center gap-2 text-sm"><CheckCircle size={16} className="text-[#fb5c01]" /> Conversion-focused layout</li>
-                <li className="flex items-center gap-2 text-sm"><CheckCircle size={16} className="text-[#fb5c01]" /> Advanced SEO & Speed</li>
-                <li className="flex items-center gap-2 text-sm"><CheckCircle size={16} className="text-[#fb5c01]" /> Animations & Interactions</li>
-                <li className="flex items-center gap-2 text-sm"><CheckCircle size={16} className="text-[#fb5c01]" /> Content assistance</li>
-                <li className="flex items-center gap-2 text-sm"><CheckCircle size={16} className="text-[#fb5c01]" /> Priority support + 3-4 revs</li>
+
+            <FadeIn className="bg-white p-10 lg:p-12 rounded-3xl border border-[#e4bfb1]/20 flex flex-col transition-all duration-500 hover:shadow-[0_30px_60px_-15px_rgba(251,92,1,0.15)] hover:-translate-y-2 group relative overflow-hidden">
+              <div className="absolute top-0 right-0 w-32 h-32 bg-[#fb5c01]/5 rounded-bl-full -mr-16 -mt-16 transition-transform duration-500 group-hover:scale-150"></div>
+              
+              <p className="text-[10px] text-[#fb5c01] font-black uppercase tracking-[0.2em] mb-4">Market Leader</p>
+              <h3 className="text-3xl font-black text-[#1d1b18] mb-6 group-hover:text-[#fb5c01] transition-colors">Authority</h3>
+              
+              <p className="text-base text-[#5b4137] mb-8 font-medium italic border-l-2 border-[#fb5c01]/20 pl-4">“Build a premium presence that positions you above competitors”</p>
+              
+              <div className="flex items-baseline gap-1 mb-8">
+                <span className="text-4xl font-black text-[#1d1b18]">₹62,000</span>
+                <span className="text-[#5b4137]/60 text-sm font-bold uppercase">One-time</span>
+              </div>
+
+              <ul className="space-y-4 mb-10 flex-grow relative z-10">
+                <li className="flex items-center gap-3 text-sm font-medium text-[#5b4137]"><CheckCircle size={18} className="text-[#fb5c01] shrink-0" /> Everything in Growth</li>
+                <li className="flex items-center gap-3 text-sm font-medium text-[#5b4137]"><CheckCircle size={18} className="text-[#fb5c01] shrink-0" /> Custom UI (not layout-based)</li>
+                <li className="flex items-center gap-3 text-sm font-medium text-[#5b4137]"><CheckCircle size={18} className="text-[#fb5c01] shrink-0" /> Advanced CMS sections</li>
+                <li className="flex items-center gap-3 text-sm font-medium text-[#5b4137]"><CheckCircle size={18} className="text-[#fb5c01] shrink-0" /> Conversion-focused landing</li>
+                <li className="flex items-center gap-3 text-sm font-medium text-[#5b4137]"><CheckCircle size={18} className="text-[#fb5c01] shrink-0" /> Performance + UX optimization</li>
+                
+                <li className="mt-8 pt-8 border-t border-[#e4bfb1]/20">
+                  <div className="flex items-center gap-2 text-[10px] font-black text-[#1d1b18] mb-4 uppercase tracking-[0.2em] opacity-50">Business Outcome</div>
+                  <div className="space-y-3">
+                    <div className="flex items-center gap-3 text-sm text-[#1d1b18] font-bold py-2 px-4 bg-[#f8f3ed] rounded-lg border border-[#e4bfb1]/10"><BadgeCheck size={18} className="text-green-600" /> Premium brand perception</div>
+                    <div className="flex items-center gap-3 text-sm text-[#1d1b18] font-bold py-2 px-4 bg-[#f8f3ed] rounded-lg border border-[#e4bfb1]/10"><BadgeCheck size={18} className="text-green-600" /> Higher conversion rates</div>
+                  </div>
+                </li>
               </ul>
-              <Button to="/contact" variant="outline" className="w-full">Get Started</Button>
+              <Button to="/contact" variant="outline" className="w-full py-6 rounded-2xl border-2 hover:bg-[#fb5c01] hover:text-white transition-all duration-300">Get Started</Button>
             </FadeIn>
           </StaggerContainer>
         </div>

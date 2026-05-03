@@ -9,7 +9,7 @@ export const Services = () => {
       id: "01",
       title: "Website Design",
       description: "We build trust instantly. Your website is your digital shop. We make sure it looks professional and premium, so your customers feel safe buying from you.",
-      image: "/website-design.png",
+      image: "/website-design.webp",
       features: [
         "Professional look that builds trust",
         "Easy for customers to find information",
@@ -20,7 +20,7 @@ export const Services = () => {
       id: "02",
       title: "Website Development",
       description: "Fast, reliable, and mobile-first. Most of your customers in India will visit from their phones. We ensure your site is blazing fast and works perfectly on every device.",
-      image: "/website-development.png",
+      image: "/website-development.webp",
       features: [
         "Super fast loading on mobile data",
         "Secure and reliable hosting",
@@ -31,7 +31,7 @@ export const Services = () => {
       id: "03",
       title: "Conversion Optimization",
       description: "Turns visitors into paying customers. We don't just want people to see your site; we want them to call you. We optimize your site to get you more inquiries.",
-      image: "/conversion-optimization.png",
+      image: "/conversion-optimization.webp",
       features: [
         "WhatsApp and Call button integration",
         "Easy-to-fill inquiry forms",

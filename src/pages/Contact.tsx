@@ -6,7 +6,7 @@ import { MessageSquare, Mail, ArrowRight, CheckCircle2, AlertCircle } from "luci
 
 export const Contact = () => {
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
-  const [selectedService, setSelectedService] = useState("Starter Website");
+  const [selectedService, setSelectedService] = useState("Launch");
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -133,7 +133,7 @@ export const Contact = () => {
                         <div className="group relative">
                           <label className="block text-xs uppercase tracking-widest text-[#5b4137] font-bold mb-2 transition-all group-focus-within:text-[#fb5c01]">What do you need help with?</label>
                           <div className="flex flex-wrap gap-3 mt-4">
-                            {["Starter Website", "Growth Website", "Premium Website", "Other"].map((option) => (
+                            {["Launch", "Growth", "Pro / Authority", "Other"].map((option) => (
                               <button 
                                 key={option}
                                 type="button"
