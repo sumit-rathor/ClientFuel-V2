@@ -123,7 +123,7 @@ export const Home = () => {
                 <div className="aspect-video overflow-hidden rounded-lg bg-[#ded9d4] mb-8 border border-[#e4bfb1]/10">
                   <img 
                     referrerPolicy="no-referrer"
-                    src="/royal-horizon-realty.webp" 
+                    src="https://res.cloudinary.com/dgts9ksog/image/upload/v1777795115/royal-horizon-realty_rpxbkr.webp" 
                     alt="Royal Horizon Realty" 
                     className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" 
                   />
@@ -138,7 +138,7 @@ export const Home = () => {
                 <div className="aspect-video overflow-hidden rounded-lg bg-[#ded9d4] mb-8 border border-[#e4bfb1]/10">
                   <img 
                     referrerPolicy="no-referrer"
-                    src="/iron-forge-fitness.webp" 
+                    src="https://res.cloudinary.com/dgts9ksog/image/upload/v1777795114/iron-forge-fitness_rf06xc.webp" 
                     alt="Iron Forge Fitness" 
                     className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" 
                   />
