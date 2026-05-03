@@ -36,7 +36,7 @@ export const Home = () => {
                 <Button to="/contact" size="lg">
                   Book a Call
                 </Button>
-                <Button to="/portfolio" variant="ghost" size="lg" className="group">
+                <Button to="/portfolio" variant="outline" size="lg" className="group">
                   View Our Work <span className="inline-block transition-transform group-hover:translate-x-1 ml-2">→</span>
                 </Button>
               </div>
