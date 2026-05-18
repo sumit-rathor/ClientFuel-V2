@@ -3,6 +3,7 @@ import { Routes, Route, useLocation } from "react-router";
 import { HelmetProvider } from "react-helmet-async";
 import { Navbar } from "./components/layout/Navbar";
 import { Footer } from "./components/layout/Footer";
+import { AnalyticsTracker } from "./components/AnalyticsTracker";
 import { AnimatePresence, motion } from "motion/react";
 
 // Lazy loading for performance
@@ -54,6 +55,7 @@ export default function App() {
   return (
     <HelmetProvider>
       <ScrollToTop />
+      <AnalyticsTracker />
       <div className="min-h-screen bg-[#fef9f2] text-[#1d1b18] selection:bg-[#fb5c01] selection:text-white">
         <Navbar />
         <AnimatePresence mode="wait">
