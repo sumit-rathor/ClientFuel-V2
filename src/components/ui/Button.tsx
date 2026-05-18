@@ -1,23 +1,25 @@
-import { ReactNode } from "react";
-import { Link } from "react-router-dom";
+import React, { ReactNode } from "react";
+import { Link } from "react-router";
 import { cn } from "@/src/lib/utils";
 
-interface ButtonProps {
+interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   children: ReactNode;
   to?: string;
-  onClick?: () => void;
+  href?: string;
   variant?: "primary" | "secondary" | "outline" | "ghost";
-  className?: string;
   size?: "sm" | "md" | "lg";
+  className?: string; // Add explicitly to be sure
+  type?: "submit" | "button" | "reset";
 }
 
 export const Button = ({
   children,
   to,
-  onClick,
+  href,
   variant = "primary",
   className,
   size = "md",
+  ...props
 }: ButtonProps) => {
   const baseStyles = "inline-flex items-center justify-center rounded-lg font-bold transition-all duration-300 ease-in-out active:scale-95 hover:-translate-y-0.5";
   
@@ -44,8 +46,16 @@ export const Button = ({
     );
   }
 
+  if (href) {
+    return (
+      <a href={href} target="_blank" rel="noopener noreferrer" className={combinedClassName}>
+        {children}
+      </a>
+    );
+  }
+
   return (
-    <button onClick={onClick} className={combinedClassName}>
+    <button className={combinedClassName} {...props}>
       {children}
     </button>
   );

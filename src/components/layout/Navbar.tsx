@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router";
 import { Button } from "../ui/Button";
 import { cn } from "@/src/lib/utils";
 import { Menu, X } from "lucide-react";
@@ -42,19 +42,20 @@ export const Navbar = () => {
         <Link
           to="/"
           className="flex items-center transition-transform duration-300 hover:scale-110 active:scale-95"
+          aria-label="ClientFuel Home"
         >
-          <img src="/logo.svg" alt="ClientFuel Logo" className="h-10 w-auto" />
+          <img src="/logo.svg" alt="" className="h-10 w-auto" aria-hidden="true" />
           <span className="ml-2.5 text-2xl font-black tracking-[-0.04em] text-[#1d1b18]">ClientFuel</span>
         </Link>
 
         {/* Desktop Nav */}
-        <div className="hidden md:flex items-center gap-10">
+        <nav className="hidden md:flex items-center gap-10" aria-label="Main Navigation">
           {navLinks.map((link) => (
             <Link
               key={link.name}
               to={link.path}
               className={cn(
-                "text-sm font-medium tracking-tight transition-all duration-300 relative group py-1",
+                "text-sm font-bold tracking-tight transition-all duration-300 relative group py-1 uppercase tracking-wider",
                 location.pathname === link.path
                   ? "text-[#fb5c01]"
                   : "text-[#5b4137] hover:text-[#1d1b18]"
@@ -70,14 +71,16 @@ export const Navbar = () => {
           <Button to="/contact" size="sm">
             Book a Call
           </Button>
-        </div>
+        </nav>
 
         {/* Mobile Toggle */}
         <button
-          className="md:hidden text-[#1d1b18]"
+          className="md:hidden text-[#1d1b18] p-2"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          aria-label={isMobileMenuOpen ? "Close Menu" : "Open Menu"}
+          aria-expanded={isMobileMenuOpen}
         >
-          {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          {isMobileMenuOpen ? <X size={24} aria-hidden="true" /> : <Menu size={24} aria-hidden="true" />}
         </button>
       </div>
 

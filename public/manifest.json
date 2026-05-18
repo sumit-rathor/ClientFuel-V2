@@ -1,6 +1,11 @@
 {
   "name": "ClientFuel",
   "short_name": "ClientFuel",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#fef9f2",
+  "theme_color": "#fb5c01",
+  "description": "Premium Web Design Agency for Indian Businesses",
   "icons": [
     {
       "src": "/android-chrome-192x192.png",
@@ -12,8 +17,5 @@
       "sizes": "512x512",
       "type": "image/png"
     }
-  ],
-  "theme_color": "#fb5c01",
-  "background_color": "#ffffff",
-  "display": "standalone"
+  ]
 }
