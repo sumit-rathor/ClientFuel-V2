@@ -9,6 +9,7 @@ const TermsConditions = () => {
         title="Terms & Conditions | ClientFuel"
         description="Terms and conditions for ClientFuel web design services."
         canonicalPath="/terms"
+        robots="noindex, follow"
       />
       <main className="pt-32 pb-40">
         <div className="max-w-4xl mx-auto px-8">

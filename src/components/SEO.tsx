@@ -8,6 +8,7 @@ interface SEOProps {
   ogType?: "website" | "article";
   ogImage?: string;
   schema?: any;
+  robots?: string;
 }
 
 export const SEO: React.FC<SEOProps> = ({
@@ -17,6 +18,7 @@ export const SEO: React.FC<SEOProps> = ({
   ogType = "website",
   ogImage = "https://clientfuel.in/og-image.jpg", // Default OG image
   schema,
+  robots = "index, follow",
 }) => {
   const siteUrl = "https://clientfuel.in";
   const fullUrl = `${siteUrl}${canonicalPath}`;
@@ -44,7 +46,7 @@ export const SEO: React.FC<SEOProps> = ({
       <title>{title} | ClientFuel - Web Design Agency India</title>
       <meta name="description" content={description} />
       <link rel="canonical" href={fullUrl} />
-      <meta name="robots" content="index, follow" />
+      <meta name="robots" content={robots} />
 
       {/* Open Graph */}
       <meta property="og:site_name" content="ClientFuel" />

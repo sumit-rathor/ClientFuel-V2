@@ -1,9 +1,15 @@
-import React from "react";
+import React, { useContext } from "react";
 import { SEO } from "@/src/components/SEO";
 import { FadeIn } from "@/src/components/ui/Animations";
 import { Button } from "@/src/components/ui/Button";
+import { ServerStatusContext } from "../lib/ServerStatusContext";
 
 export const NotFound = () => {
+  const { setStatusCode } = useContext(ServerStatusContext);
+  if (setStatusCode) {
+    setStatusCode(404);
+  }
+
   return (
     <>
       <SEO 

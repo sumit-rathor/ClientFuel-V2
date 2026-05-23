@@ -10,6 +10,7 @@ const PrivacyPolicy = () => {
         title="Privacy Policy | ClientFuel"
         description="Privacy policy for ClientFuel - Web Design Agency India. Learn how we handle your data."
         canonicalPath="/privacy"
+        robots="noindex, follow"
       />
       <main className="pt-32 pb-40">
         <div className="max-w-4xl mx-auto px-8">

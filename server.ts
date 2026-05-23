@@ -2,27 +2,28 @@ import fs from "fs";
 import path from "path";
 import { fileURLToPath } from "url";
 import express from "express";
+import compression from "compression";
 import { createServer as createViteServer } from "vite";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-async function startServer() {
-  const app = express();
-  const PORT = 3000;
-  const isProd = process.env.NODE_ENV === "production";
+const isProd = process.env.NODE_ENV === "production";
+const app = express();
 
-  let vite: any;
+let vite: any;
+
+async function bootstrap() {
   if (!isProd) {
     vite = await createViteServer({
       server: { middlewareMode: true },
-      appType: "custom", // Changed from "spa" to "custom" for SSR
+      appType: "custom",
     });
     app.use(vite.middlewares);
   } else {
-    app.use((await import("compression")).default());
+    app.use(compression());
     app.use(
-      (await import("serve-static")).default(path.resolve(__dirname, "dist/client"), {
+      express.static(path.resolve(__dirname, "dist/client"), {
         index: false,
       })
     );
@@ -34,49 +35,41 @@ async function startServer() {
     try {
       let template, render;
       if (!isProd) {
-        // 1. Read index.html
         template = fs.readFileSync(path.resolve(__dirname, "index.html"), "utf-8");
-
-        // 2. Apply Vite HTML transforms
         template = await vite.transformIndexHtml(url, template);
-
-        // 3. Load the server entry
         render = (await vite.ssrLoadModule("/src/entry-server.tsx")).render;
       } else {
-        // 1. Read static index.html
         template = fs.readFileSync(path.resolve(__dirname, "dist/client/index.html"), "utf-8");
-
-        // 2. Load the bundled server entry
         // @ts-ignore
         render = (await import("./dist/server/entry-server.js")).render;
       }
 
-      // 4. Render the app
       const helmetContext = {};
-      const appHtml = await render(url, helmetContext);
+      const routerContext: { statusCode?: number } = {};
+      const appHtml = await render(url, helmetContext, routerContext);
 
-      // 5. Inject the app-rendered HTML into the template
-      // @ts-ignore - helmetContext is populated by SEO component
+      // @ts-ignore
       const { helmet } = helmetContext;
       
-      const html = template
-        .replace(`<!--ssr-head-->`, `
-          ${helmet?.title.toString() || ""}
-          ${helmet?.meta.toString() || ""}
-          ${helmet?.link.toString() || ""}
-          ${helmet?.script.toString() || ""}
-        `)
-        .replace(`<!--ssr-outlet-->`, appHtml);
-
-      // Handle 404
-      if (url === "/404" || appHtml.includes("404")) {
-          // This is a bit hacky, but in a custom setup without matchRoutes exposed, 
-          // we can check if the rendered output contains 404 indicators.
-          // Better: The SEO component sets Robots "noindex" for 404.
-          res.status(404).set({ "Content-Type": "text/html" }).end(html);
+      const ssrHeadPattern = /<!--ssr-head-start-->[\s\S]*<!--ssr-head-end-->/;
+      const ssrHeadContent = `
+        ${helmet?.title.toString() || ""}
+        ${helmet?.meta.toString() || ""}
+        ${helmet?.link.toString() || ""}
+        ${helmet?.script.toString() || ""}
+      `;
+      
+      let html = template;
+      if (ssrHeadPattern.test(template)) {
+        html = template.replace(ssrHeadPattern, ssrHeadContent);
       } else {
-          res.status(200).set({ "Content-Type": "text/html" }).end(html);
+        html = template.replace("<!--ssr-head-->", ssrHeadContent);
       }
+
+      html = html.replace(`<!--ssr-outlet-->`, appHtml);
+
+      const statusCode = routerContext.statusCode || 200;
+      res.status(statusCode).set({ "Content-Type": "text/html" }).end(html);
     } catch (e: any) {
       !isProd && vite.ssrFixStacktrace(e);
       console.log(e.stack);
@@ -84,9 +77,15 @@ async function startServer() {
     }
   });
 
-  app.listen(PORT, "0.0.0.0", () => {
-    console.log(`Server running on http://localhost:${PORT}`);
-  });
+  // Start listener if not in Vercel serverless environment
+  if (!process.env.VERCEL) {
+    const PORT = 3000;
+    app.listen(PORT, "0.0.0.0", () => {
+      console.log(`Server running on http://localhost:${PORT}`);
+    });
+  }
 }
 
-startServer();
+bootstrap();
+
+export { app };
