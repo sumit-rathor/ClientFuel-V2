@@ -1,59 +1,14 @@
 {
-  "version": 2,
-  "builds": [
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist/client",
+  "rewrites": [
     {
-      "src": "api/index.ts",
-      "use": "@vercel/node"
-    }
-  ],
-  "routes": [
-    {
-      "src": "/assets/(.*)",
-      "dest": "/dist/client/assets/$1"
+      "source": "/assets/(.*)",
+      "destination": "/assets/$1"
     },
     {
-      "src": "/favicon.ico",
-      "dest": "/dist/client/favicon.ico"
-    },
-    {
-      "src": "/favicon-16x16.png",
-      "dest": "/dist/client/favicon-16x16.png"
-    },
-    {
-      "src": "/favicon-32x32.png",
-      "dest": "/dist/client/favicon-32x32.png"
-    },
-    {
-      "src": "/logo.svg",
-      "dest": "/dist/client/logo.svg"
-    },
-    {
-      "src": "/android-chrome-192x192.png",
-      "dest": "/dist/client/android-chrome-192x192.png"
-    },
-    {
-      "src": "/android-chrome-512x512.png",
-      "dest": "/dist/client/android-chrome-512x512.png"
-    },
-    {
-      "src": "/apple-touch-icon.png",
-      "dest": "/dist/client/apple-touch-icon.png"
-    },
-    {
-      "src": "/manifest.json",
-      "dest": "/dist/client/manifest.json"
-    },
-    {
-      "src": "/sitemap.xml",
-      "dest": "/dist/client/sitemap.xml"
-    },
-    {
-      "src": "/robots.txt",
-      "dest": "/dist/client/robots.txt"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "api/index.ts"
+      "source": "/(.*)",
+      "destination": "/api/index"
     }
   ]
 }
