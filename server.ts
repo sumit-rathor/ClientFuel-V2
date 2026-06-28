@@ -61,7 +61,7 @@ app.get("*", async (req, res) => {
     } else {
       template = fs.readFileSync(path.join(process.cwd(), "dist/client/index.html"), "utf-8");
       // Import the production render function
-      const serverEntryPath = path.join(process.cwd(), "dist/server/entry-server.js");
+      const serverEntryPath = path.join(process.cwd(), "dist/server/entry-server.cjs");
       const serverEntry = await import(serverEntryPath);
       render = serverEntry.render;
     }
