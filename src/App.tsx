@@ -1,7 +1,6 @@
 import React, { Suspense, lazy, useEffect } from "react";
 import { Routes, Route, useLocation } from "react-router";
-import * as ReactHelmetAsync from "react-helmet-async";
-const { HelmetProvider } = ReactHelmetAsync;
+import { HelmetProvider } from "react-helmet-async";
 import { Navbar } from "./components/layout/Navbar";
 import { Footer } from "./components/layout/Footer";
 import { AnalyticsTracker } from "./components/AnalyticsTracker";

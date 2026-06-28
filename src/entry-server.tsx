@@ -1,8 +1,7 @@
 import React from "react";
 import ReactDOMServer from "react-dom/server";
 import { StaticRouter } from "react-router";
-import * as ReactHelmetAsync from "react-helmet-async";
-const { HelmetProvider } = ReactHelmetAsync;
+import { HelmetProvider } from "react-helmet-async";
 import App from "./App";
 import { ServerStatusContext } from "./lib/ServerStatusContext";
 
