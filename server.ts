@@ -12,23 +12,6 @@ const app = express();
 
 let vite: any = null;
 
-function loadTemplateFrom(filePath: string): string {
-  return fs.readFileSync(filePath, "utf-8");
-}
-
-function renderStaticFallback(res: express.Response) {
-  const fallbackTemplatePath = fs.existsSync(path.join(process.cwd(), "dist/client/index.html"))
-    ? path.join(process.cwd(), "dist/client/index.html")
-    : path.join(process.cwd(), "index.html");
-
-  const html = loadTemplateFrom(fallbackTemplatePath)
-    .replace(/<!--ssr-head-start-->[\s\S]*<!--ssr-head-end-->/, "")
-    .replace("<!--ssr-head-->", "")
-    .replace("<!--ssr-outlet-->", "");
-
-  res.status(200).set({ "Content-Type": "text/html" }).end(html);
-}
-
 // Configure compression & static files synchronously if in production
 if (isProd) {
   app.use(compression());
@@ -72,20 +55,14 @@ app.get("*", async (req, res) => {
 
     if (!isProd) {
       const viteInstance = await getVite();
-      template = loadTemplateFrom(path.join(process.cwd(), "index.html"));
+      template = fs.readFileSync(path.join(process.cwd(), "index.html"), "utf-8");
       template = await viteInstance.transformIndexHtml(url, template);
       render = (await viteInstance.ssrLoadModule("/src/entry-server.tsx")).render;
     } else {
-      const distTemplatePath = path.join(process.cwd(), "dist/client/index.html");
-      const distServerEntryPath = path.join(process.cwd(), "dist/server/entry-server.js");
-
-      if (!fs.existsSync(distTemplatePath) || !fs.existsSync(distServerEntryPath)) {
-        console.warn("Missing SSR build artifacts in production. Serving static fallback template.");
-        return renderStaticFallback(res);
-      }
-
-      template = loadTemplateFrom(distTemplatePath);
-      const serverEntry = await import(distServerEntryPath);
+      template = fs.readFileSync(path.join(process.cwd(), "dist/client/index.html"), "utf-8");
+      // Import the production render function
+      const serverEntryPath = path.join(process.cwd(), "dist/server/entry-server.js");
+      const serverEntry = await import(serverEntryPath);
       render = serverEntry.render;
     }
 
@@ -95,7 +72,7 @@ app.get("*", async (req, res) => {
 
     // @ts-ignore
     const { helmet } = helmetContext;
-
+    
     const ssrHeadPattern = /<!--ssr-head-start-->[\s\S]*<!--ssr-head-end-->/;
     const ssrHeadContent = `
       ${helmet?.title.toString() || ""}
@@ -103,7 +80,7 @@ app.get("*", async (req, res) => {
       ${helmet?.link.toString() || ""}
       ${helmet?.script.toString() || ""}
     `;
-
+    
     let html = template;
     if (ssrHeadPattern.test(template)) {
       html = template.replace(ssrHeadPattern, ssrHeadContent);
@@ -120,11 +97,6 @@ app.get("*", async (req, res) => {
       vite.ssrFixStacktrace(e);
     }
     console.error(e.stack);
-
-    if (isProd) {
-      return renderStaticFallback(res);
-    }
-
     res.status(500).end(e.stack);
   }
 });
